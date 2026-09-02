@@ -3,7 +3,7 @@ import { PwReveal } from "@/components/payway/pw-reveal";
 const CORE_FEATURES = [
   {
     name: "Edudigi",
-    image: "/images/payway/Edudigi.jpeg",
+    image: "/images/payway/Edudigi.png",
     alt: "Edudigi",
     description:
       "Solusi digital untuk kebutuhan pendidikan yang praktis dan mudah diakses.",
@@ -17,7 +17,7 @@ const CORE_FEATURES = [
   },
   {
     name: "Q-tra",
-    image: "/images/payway/Q-tra.jpeg",
+    image: "/images/payway/Q-tra.png",
     alt: "Q-tra",
     description:
       "Pembayaran dan transaksi digital yang cepat, aman, dan nyaman.",

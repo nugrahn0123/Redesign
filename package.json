@@ -4,9 +4,9 @@
   "private": true,
   "description": "PayWay fintech landing page — standalone Next.js project (layout study)",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "typecheck": "tsc --noEmit",
     "mcp:sakusultan": "node ..\\mcp-sakusultan\\dist\\index.js"
   },

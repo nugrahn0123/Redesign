@@ -215,48 +215,48 @@ const PW_FEATURES: PwFeature[] = [
     label: "EduDigi",
     title: "EduDigi",
     description:
-      "Solusi digital untuk kebutuhan pendidikan yang praktis dan mudah diakses.",
+      "EduDigi merupakan program edukasi pada aplikasi SAKU SULTAN yang dirancang untuk meningkatkan pengetahuan dan keterampilan digital para mitra serta masyarakat. Program ini menyajikan pembelajaran yang praktis dan mudah dipahami, khususnya mengenai penggunaan layanan keuangan digital secara bijak, aman, dan bertanggung jawab.\n\nMelalui EduDigi, pengguna dapat mempelajari cara bertransaksi digital, menjaga kerahasiaan PIN dan kode OTP, melindungi data pribadi, mengenali modus penipuan daring, serta memanfaatkan teknologi untuk mengembangkan usaha.\n\nKehadiran EduDigi menegaskan bahwa SAKU SULTAN tidak hanya menyediakan layanan transaksi, tetapi juga turut membangun masyarakat yang semakin cakap dan aman di era digital.\n\nEduDigi — Belajar Digital, Bertransaksi Aman, Usaha Makin Berkembang.",
     bullets: [
       {
         icon: zapIcon,
-        lead: "Pembelajaran praktis",
-        rest: "— Akses kebutuhan pendidikan dalam satu pengalaman digital yang ringan dan cepat.",
+        lead: "Belajar layanan digital",
+        rest: "— Materi praktis dan mudah dipahami untuk mitra serta masyarakat.",
       },
       {
         icon: globeIcon,
-        lead: "Mudah dijangkau",
-        rest: "— Proses lebih sederhana untuk kebutuhan sekolah dan akademik sehari-hari.",
+        lead: "Bertransaksi dengan aman",
+        rest: "— Pelajari cara menjaga PIN, OTP, dan data pribadi.",
       },
       {
         icon: chartColumnIcon,
-        lead: "Bermanfaat untuk semua",
-        rest: "— Memberikan kemudahan bagi siswa, orang tua, dan tenaga pendidikan.",
+        lead: "Mendukung perkembangan usaha",
+        rest: "— Manfaatkan teknologi untuk mengembangkan usaha di era digital.",
       },
     ],
-    imageSrc: "/images/payway/Edudigi.jpeg",
+    imageSrc: "/images/payway/Edudigi.png",
     imageAlt: "EduDigi",
   },
   {
     stickyTop: "top-[80px] md:top-[100px]",
-    label: "PasSolo",
-    title: "PasSolo",
+    label: "PASSOLO",
+    title: "PASSOLO",
     description:
-      "Layanan digital untuk mendukung aktivitas harian masyarakat Solo.",
+      "PASSOLO merupakan fitur yang mengangkat tradisi masyarakat Sulawesi Selatan dalam memberikan sumbangan atau tanda kasih pada acara pernikahan dan kegiatan sosial lainnya ke dalam layanan digital.\n\nMelalui fitur ini, pengguna dapat mengirim passolo secara lebih mudah, cepat, dan praktis melalui aplikasi SAKU SULTAN, meskipun tidak sempat hadir langsung di lokasi acara. Transaksi juga dapat tercatat dengan rapi sehingga lebih mudah diperiksa kembali.\n\nKehadiran PASSOLO menjadi bentuk perpaduan antara kearifan lokal dan teknologi — melestarikan budaya saling membantu sekaligus menyesuaikannya dengan kebutuhan masyarakat masa kini.\n\nPASSOLO — Tradisi Tetap Terjaga, Berbagi Jadi Lebih Mudah.",
     bullets: [
       {
         icon: zapIcon,
-        lead: "Hidup lebih praktis",
-        rest: "— Semua kebutuhan transaksi harian bisa ditangani lebih cepat dan sederhana.",
+        lead: "Kirim tanda kasih",
+        rest: "— Berikan passolo untuk acara pernikahan dan kegiatan sosial lainnya.",
       },
       {
         icon: shieldCheckIcon,
-        lead: "Nyaman dalam penggunaan",
-        rest: "— Antarmuka yang responsif membuat aktivasi dan layanan terasa ringan.",
+        lead: "Tetap terhubung",
+        rest: "— Kirim passolo meskipun tidak sempat hadir langsung di lokasi acara.",
       },
       {
         icon: usersIcon,
-        lead: "Dukungan komunitas lokal",
-        rest: "— Dirancang agar proses transaksi dan kebutuhan sehari-hari lebih terhubung.",
+        lead: "Tercatat dengan rapi",
+        rest: "— Periksa kembali riwayat transaksi dengan lebih mudah.",
       },
     ],
     imageSrc: "/images/payway/Passolo.jpeg",
@@ -264,28 +264,28 @@ const PW_FEATURES: PwFeature[] = [
   },
   {
     stickyTop: "top-[100px] md:top-[120px]",
-    label: "Q-tra",
-    title: "Q-tra",
+    label: "QTRA",
+    title: "QTRA",
     description:
-      "Pembayaran dan transaksi digital yang cepat, aman, dan nyaman.",
+      "QTRA atau Quick Transfer merupakan fitur transfer cepat pada aplikasi SAKU SULTAN yang dirancang untuk memudahkan pengguna mengirim dana secara praktis, aman, dan efisien melalui satu aplikasi.\n\nDengan QTRA, pengguna dapat melakukan transfer tanpa harus melalui proses yang panjang. Cukup memilih tujuan transfer, memasukkan nominal, memeriksa kembali data penerima, lalu mengonfirmasi transaksi. Fitur ini membantu pengguna menghemat waktu dalam memenuhi kebutuhan transaksi sehari-hari.\n\nQTRA memberikan beberapa manfaat utama:\n• Proses transfer lebih cepat dan sederhana.\n• Transaksi dapat dilakukan kapan saja melalui ponsel.\n• Mengurangi kesalahan dengan halaman konfirmasi data penerima.\n• Riwayat transaksi tersimpan sehingga mudah diperiksa kembali.\n• Mendukung kebutuhan pribadi maupun aktivitas usaha Mitra SAKU SULTAN.\n\nQTRA menjadi bagian dari komitmen SAKU SULTAN dalam menghadirkan layanan keuangan digital yang mudah digunakan oleh masyarakat. Kehadirannya diharapkan dapat mempercepat perputaran transaksi, mendukung kegiatan usaha para mitra, serta memperluas kebiasaan bertransaksi secara digital.\n\nQTRA — Quick Transfer: Kirim dana lebih cepat, praktis, dan aman bersama SAKU SULTAN.\n\nCatatan: tujuan transfer, biaya layanan, batas nominal, dan waktu pemrosesan mengikuti ketentuan resmi yang berlaku pada aplikasi SAKU SULTAN.",
     bullets: [
       {
         icon: creditCardIcon,
-        lead: "Transaksi cepat",
-        rest: "— Proses pembayaran lebih singkat tanpa hambatan yang membuat menunggu.",
+        lead: "Proses cepat dan sederhana",
+        rest: "— Pilih tujuan, masukkan nominal, periksa data, lalu konfirmasi.",
       },
       {
         icon: smartphoneIcon,
-        lead: "Aman dan praktis",
-        rest: "— Sistem pembayaran dibuat mudah dipakai sambil menjaga keamanan pengguna.",
+        lead: "Transfer kapan saja",
+        rest: "— Kirim dana melalui ponsel untuk kebutuhan pribadi maupun usaha.",
       },
       {
         icon: chartColumnIcon,
-        lead: "Cocok untuk kebutuhan harian",
-        rest: "— Tersedia untuk transaksi yang sering dilakukan setiap hari dengan pengalaman yang lancar.",
+        lead: "Riwayat mudah diperiksa",
+        rest: "— Konfirmasi penerima dan riwayat transaksi membantu mengurangi kesalahan.",
       },
     ],
-    imageSrc: "/images/payway/Q-tra.jpeg",
+    imageSrc: "/images/payway/Q-tra.png",
     imageAlt: "Q-tra",
   },
 ];
@@ -309,7 +309,7 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
             <h4 className="max-w-[432px] font-semibold text-[32px] md:text-[42px] leading-[38px] md:leading-[48px] tracking-[-1.2px] md:tracking-[-2px] text-[#042718] mb-4 md:mb-5">
               {feature.title}
             </h4>
-            <p className="w-full lg:w-[572px] font-sans font-normal text-base md:text-lg leading-[24px] md:leading-[28px] text-[#042718] opacity-80">
+            <p className="w-full lg:w-[572px] whitespace-pre-line font-sans font-normal text-base md:text-lg leading-[24px] md:leading-[28px] text-[#042718] opacity-80">
               {feature.description}
             </p>
           </div>
