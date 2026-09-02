@@ -212,107 +212,81 @@ type PwFeature = {
 const PW_FEATURES: PwFeature[] = [
   {
     stickyTop: "top-[60px] md:top-[80px]",
-    label: "Pembayaran Tagihan",
-    title: "Bayar Tagihan Bulanan dari Satu Aplikasi",
+    label: "EduDigi",
+    title: "EduDigi",
     description:
-      "Kelola pembayaran listrik, air, internet, BPJS, dan kebutuhan bulanan lain tanpa berpindah aplikasi.",
+      "Solusi digital untuk kebutuhan pendidikan yang praktis dan mudah diakses.",
     bullets: [
       {
         icon: zapIcon,
-        lead: "Semua tagihan penting",
-        rest: "— PLN, PDAM, internet, BPJS, dan TV kabel tersedia dalam satu alur.",
+        lead: "Pembelajaran praktis",
+        rest: "— Akses kebutuhan pendidikan dalam satu pengalaman digital yang ringan dan cepat.",
       },
       {
         icon: globeIcon,
-        lead: "Cek status lebih cepat",
-        rest: "— Pengguna bisa langsung melihat layanan yang siap dibayar tanpa proses rumit.",
+        lead: "Mudah dijangkau",
+        rest: "— Proses lebih sederhana untuk kebutuhan sekolah dan akademik sehari-hari.",
       },
       {
         icon: chartColumnIcon,
-        lead: "Pembayaran praktis",
-        rest: "— Proses transaksi dibuat singkat supaya tidak perlu antre atau pindah channel.",
+        lead: "Bermanfaat untuk semua",
+        rest: "— Memberikan kemudahan bagi siswa, orang tua, dan tenaga pendidikan.",
       },
     ],
-    imageSrc: "/images/payway/unsplash-photo-1535713875002-d1d0cf377fde.jpg",
-    imageAlt: "Bayar Tagihan Bulanan dari Satu Aplikasi",
+    imageSrc: "/images/payway/Edudigi.jpeg",
+    imageAlt: "EduDigi",
   },
   {
     stickyTop: "top-[80px] md:top-[100px]",
-    label: "Barcode Scan",
-    title: "Bayar di Merchant dengan QR atau Barcode",
+    label: "PasSolo",
+    title: "PasSolo",
     description:
-      "Fitur barcode scan memudahkan pembayaran cepat tanpa uang tunai, baik di merchant harian maupun outlet partner.",
+      "Layanan digital untuk mendukung aktivitas harian masyarakat Solo.",
     bullets: [
       {
         icon: zapIcon,
-        lead: "Transaksi tanpa tunai",
-        rest: "— Cukup scan QR atau barcode lalu pembayaran langsung diproses.",
+        lead: "Hidup lebih praktis",
+        rest: "— Semua kebutuhan transaksi harian bisa ditangani lebih cepat dan sederhana.",
       },
       {
         icon: shieldCheckIcon,
-        lead: "Cocok untuk merchant",
-        rest: "— Membantu pembayaran retail yang cepat dan mengurangi kesalahan input nominal.",
+        lead: "Nyaman dalam penggunaan",
+        rest: "— Antarmuka yang responsif membuat aktivasi dan layanan terasa ringan.",
       },
       {
         icon: usersIcon,
-        lead: "Realtime dan aman",
-        rest: "— Status transaksi tampil langsung setelah scan selesai.",
+        lead: "Dukungan komunitas lokal",
+        rest: "— Dirancang agar proses transaksi dan kebutuhan sehari-hari lebih terhubung.",
       },
     ],
-    imageSrc: "/images/payway/unsplash-photo-1527980965255-d3b416303d12.jpg",
-    imageAlt: "Bayar di Merchant dengan QR atau Barcode",
+    imageSrc: "/images/payway/Passolo.jpeg",
+    imageAlt: "PasSolo",
   },
   {
     stickyTop: "top-[100px] md:top-[120px]",
-    label: "Transfer & Top-Up",
-    title: "Transfer Uang dan Isi Saldo Kapan Saja",
+    label: "Q-tra",
+    title: "Q-tra",
     description:
-      "Saku Sultan mendukung transfer uang serta top-up saldo dari berbagai channel agar transaksi tetap lancar setiap saat.",
+      "Pembayaran dan transaksi digital yang cepat, aman, dan nyaman.",
     bullets: [
       {
         icon: creditCardIcon,
-        lead: "Transfer fleksibel",
-        rest: "— Kirim uang ke sesama pengguna maupun ke rekening bank lokal.",
+        lead: "Transaksi cepat",
+        rest: "— Proses pembayaran lebih singkat tanpa hambatan yang membuat menunggu.",
       },
       {
         icon: smartphoneIcon,
-        lead: "Top-up saldo",
-        rest: "— Isi saldo dari transfer bank, e-wallet, hingga channel retail yang tersedia.",
+        lead: "Aman dan praktis",
+        rest: "— Sistem pembayaran dibuat mudah dipakai sambil menjaga keamanan pengguna.",
       },
       {
         icon: chartColumnIcon,
-        lead: "Siap untuk aktivitas harian",
-        rest: "— Saldo yang terisi bisa langsung dipakai untuk belanja, scan, dan bayar tagihan.",
+        lead: "Cocok untuk kebutuhan harian",
+        rest: "— Tersedia untuk transaksi yang sering dilakukan setiap hari dengan pengalaman yang lancar.",
       },
     ],
-    imageSrc: "/images/payway/unsplash-photo-1494790108377-be9c29b29330.jpg",
-    imageAlt: "Transfer Uang dan Isi Saldo Kapan Saja",
-  },
-  {
-    stickyTop: "top-[120px] md:top-[140px]",
-    label: "E-Commerce & Biometrik",
-    title: "Belanja Online dengan Keamanan Biometrik",
-    description:
-      "Saku Sultan mendukung transaksi e-commerce dan menjaga keamanan akun dengan perlindungan biometrik berlapis.",
-    bullets: [
-      {
-        icon: walletIcon,
-        lead: "Siap untuk e-commerce",
-        rest: "— Saldo dan metode pembayaran bisa dipakai untuk transaksi online di berbagai platform.",
-      },
-      {
-        icon: shieldCheckIcon,
-        lead: "Biometric security",
-        rest: "— Karakteristik fisiologis pengguna membantu menjaga transaksi tetap aman.",
-      },
-      {
-        icon: zapIcon,
-        lead: "Perlindungan berlapis",
-        rest: "— Kombinasi validasi akun, keamanan perangkat, dan proses transaksi yang lebih terkontrol.",
-      },
-    ],
-    imageSrc: "/images/payway/feature-4th-card.png",
-    imageAlt: "Belanja Online dengan Keamanan Biometrik",
+    imageSrc: "/images/payway/Q-tra.jpeg",
+    imageAlt: "Q-tra",
   },
 ];
 
@@ -402,18 +376,13 @@ export function PwFeaturesTriple() {
           <PwReveal className="flex items-center gap-2 bg-[#198F380F] pl-[14px] pr-[16px] py-[6px] rounded-full border border-[#198F381A]">
             {sparklesIcon}
             <span className="font-sans font-normal text-base text-[#198F38] tracking-[-0.3px]">
-              Fitur
+              Fitur Inti
             </span>
           </PwReveal>
-          <PwReveal className="w-full max-w-[700px]" delay={100}>
-            <h2 className="w-full max-w-[700px] font-semibold text-[32px] md:text-[42px] lg:text-[52px] leading-[38px] md:leading-[48px] lg:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]">
-              Fitur Inti Saku Sultan yang Sudah Selaras dengan MCP
+          <PwReveal className="w-full max-w-[760px]" delay={100}>
+            <h2 className="w-full font-semibold text-[32px] md:text-[42px] lg:text-[52px] leading-[38px] md:leading-[48px] lg:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]">
+              Fitur Saku Sultan yang Sesuai dengan Kebutuhan Harian
             </h2>
-          </PwReveal>
-          <PwReveal className="w-full max-w-[800px]" delay={200}>
-            <p className="w-full max-w-[800px] font-sans font-normal text-base md:text-lg leading-[24px] md:leading-[28px] text-[#042718cc]">
-              Landing page ini sekarang menonjolkan fitur yang benar-benar ada di data Saku Sultan: tagihan, barcode scan, transfer, top-up, e-commerce, dan keamanan biometrik.
-            </p>
           </PwReveal>
         </div>
         <div className="flex flex-col gap-12 w-full items-center">
