@@ -134,21 +134,23 @@ export function PwCtaFooter() {
       </div>
 
       {/* Wordmark raksasa + legal row */}
-      <div className="relative z-10 w-full mt-10 lg:mt-12">
-        <div className="flex justify-center items-center w-full px-5 h-[150px] sm:h-[250px] lg:h-[350px]">
+      <div className="relative z-10 w-full mt-10 lg:mt-12 overflow-hidden">
+        <div className="flex justify-center items-center w-full px-0 h-[150px] sm:h-[250px] lg:h-[350px] overflow-hidden">
           <span
-            className="font-bold text-[80px] sm:text-[180px] md:text-[240px] lg:text-[345px] tracking-[-4px] sm:tracking-[-8px] lg:tracking-[-15px] select-none pointer-events-none whitespace-nowrap"
+            className="block w-[120%] sm:w-[115%] md:w-[112%] lg:w-[108%] font-bold text-[80px] sm:text-[180px] md:text-[240px] lg:text-[345px] tracking-[-4px] sm:tracking-[-8px] lg:tracking-[-15px] select-none pointer-events-none whitespace-nowrap leading-[0.8] -ml-[8%] sm:-ml-[5%] lg:-ml-[3%]"
             style={{
-              background: "linear-gradient(rgb(250, 250, 250) 4.34%, rgba(27, 109, 74, 0) 88.53%) text",
+              background: "linear-gradient(rgb(250, 250, 250) 4.34%, rgba(27, 109, 74, 0) 88.53%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
             Saku Sultan
           </span>
         </div>
-        <div className="bg-transparent mt-10 lg:mt-12 pb-8">
-          <div className="content-container flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
-            <div className="flex items-center gap-6 order-2 md:order-1">
+        <div className="bg-transparent mt-8 lg:mt-12 pb-8">
+          <div className="content-container flex flex-col md:flex-row items-center justify-between gap-4 md:gap-3">
+            <div className="flex items-center gap-5 md:gap-6 order-2 md:order-1">
               <a href="/syarat-ketentuan" className="text-[14px] sm:text-[18px] text-white opacity-70 hover:opacity-100 transition-opacity duration-300">
                 Syarat &amp; Ketentuan
               </a>
