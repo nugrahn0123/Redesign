@@ -3,9 +3,8 @@ import { PwReveal } from "@/components/payway/pw-reveal";
 /**
  * Section 03 — Process ("Get started in just 3 easy simple steps").
  * Sumber markup: docs/research/jiro-payway/sections/03-process.html
- * Snapshot statis state awal scroll-driven stepper original:
- * step 1 aktif/terbuka, step 2-3 collapsed (h-0 opacity-0).
- * Struktur sticky dipertahankan persis: outer lg:h-[200vh] + inner lg:sticky lg:top-[120px].
+ * Menampilkan tiga langkah secara ringkas agar section tidak menyisakan area
+ * kosong saat scroll pada layout tanpa stepper scroll-driven.
  */
 export function PwProcess() {
   return (
@@ -45,7 +44,7 @@ export function PwProcess() {
               </p>
             </PwReveal>
           </div>
-          <div className="w-full relative lg:h-[200vh]">
+           <div className="w-full relative">
             <div className="w-full lg:sticky lg:top-[120px] flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 lg:gap-6">
               <div className="w-full lg:w-[612px] mb-8 lg:mb-0">
                 <PwReveal className="relative w-full aspect-[6/5] sm:aspect-square lg:h-[692px] rounded-[32px] overflow-hidden">
@@ -110,7 +109,7 @@ export function PwProcess() {
                 </PwReveal>
                 {/* Step 2 — collapsed */}
                 <PwReveal delay={120} className="w-full">
-                  <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer p-5 md:p-8 pb-0 gap-0 border-transparent bg-[#f6fdff]/0">
+                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
                     <div className="flex items-start gap-3 md:gap-4 w-full">
                       <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border transition-all duration-500 shrink-0 bg-[#0427180D] border-[#0427181A] text-[#042718]">
                         <span className="font-semibold text-base md:text-lg">
@@ -121,7 +120,7 @@ export function PwProcess() {
                         <h3 className="font-semibold tracking-[-0.6px] md:tracking-[-0.8px] leading-[26px] md:leading-[30px] transition-colors duration-500 text-[18px] md:text-[24px] text-[#042718]/60">
                           Daftar Akun
                         </h3>
-                        <p className="text-[15px] md:text-[18px] leading-[22px] md:leading-[28px] transition-all duration-500 text-[#042718]/0 h-0 overflow-hidden">
+                         <p className="text-[15px] md:text-[18px] leading-[22px] md:leading-[28px] transition-all duration-500 text-[#042718] opacity-80">
                           Buat akun baru dalam hitungan menit dan verifikasi data Anda.
                         </p>
                       </div>
@@ -159,7 +158,7 @@ export function PwProcess() {
                 </PwReveal>
                 {/* Step 3 — collapsed */}
                 <PwReveal delay={240} className="w-full">
-                  <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer p-5 md:p-8 pb-0 gap-0 border-transparent bg-[#f6fdff]/0">
+                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
                     <div className="flex items-start gap-3 md:gap-4 w-full">
                       <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border transition-all duration-500 shrink-0 bg-[#0427180D] border-[#0427181A] text-[#042718]">
                         <span className="font-semibold text-base md:text-lg">
@@ -170,7 +169,7 @@ export function PwProcess() {
                         <h3 className="font-semibold tracking-[-0.6px] md:tracking-[-0.8px] leading-[26px] md:leading-[30px] transition-colors duration-500 text-[18px] md:text-[24px] text-[#042718]/60">
                           Mulai Transaksi
                         </h3>
-                        <p className="text-[15px] md:text-[18px] leading-[22px] md:leading-[28px] transition-all duration-500 text-[#042718]/0 h-0 overflow-hidden">
+                         <p className="text-[15px] md:text-[18px] leading-[22px] md:leading-[28px] transition-all duration-500 text-[#042718] opacity-80">
                           Pilih layanan, bayar tagihan atau beli pulsa, transaksi langsung jadi.
                         </p>
                       </div>

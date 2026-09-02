@@ -130,6 +130,13 @@ html {
   opacity: 1;
   transform: none;
 }
+
+/* Card aktif harus berada di atas card berikutnya agar dropdown tetap dapat
+   dibaca dan tombolnya tetap bisa ditekan saat sticky-stack berjalan. */
+.pw-feature-card:has(details[open]) {
+  z-index: 20;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

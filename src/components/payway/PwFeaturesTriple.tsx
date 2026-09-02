@@ -199,10 +199,11 @@ type PwFeatureBullet = {
 };
 
 type PwFeature = {
-  /** offset sticky-stack per kartu (persis markup) */
+  /** offset sticky-stack per kartu */
   stickyTop: string;
   label: string;
   title: string;
+  shortDescription: string;
   description: string;
   bullets: PwFeatureBullet[];
   imageSrc: string;
@@ -214,6 +215,8 @@ const PW_FEATURES: PwFeature[] = [
     stickyTop: "top-[60px] md:top-[80px]",
     label: "EduDigi",
     title: "EduDigi",
+    shortDescription:
+      "Belajar menggunakan layanan digital dengan aman, bijak, dan bertanggung jawab.",
     description:
       "EduDigi merupakan program edukasi pada aplikasi SAKU SULTAN yang dirancang untuk meningkatkan pengetahuan dan keterampilan digital para mitra serta masyarakat. Program ini menyajikan pembelajaran yang praktis dan mudah dipahami, khususnya mengenai penggunaan layanan keuangan digital secara bijak, aman, dan bertanggung jawab.\n\nMelalui EduDigi, pengguna dapat mempelajari cara bertransaksi digital, menjaga kerahasiaan PIN dan kode OTP, melindungi data pribadi, mengenali modus penipuan daring, serta memanfaatkan teknologi untuk mengembangkan usaha.\n\nKehadiran EduDigi menegaskan bahwa SAKU SULTAN tidak hanya menyediakan layanan transaksi, tetapi juga turut membangun masyarakat yang semakin cakap dan aman di era digital.\n\nEduDigi — Belajar Digital, Bertransaksi Aman, Usaha Makin Berkembang.",
     bullets: [
@@ -240,6 +243,8 @@ const PW_FEATURES: PwFeature[] = [
     stickyTop: "top-[80px] md:top-[100px]",
     label: "PASSOLO",
     title: "PASSOLO",
+    shortDescription:
+      "Kirim tanda kasih untuk acara pernikahan dan kegiatan sosial secara praktis.",
     description:
       "PASSOLO merupakan fitur yang mengangkat tradisi masyarakat Sulawesi Selatan dalam memberikan sumbangan atau tanda kasih pada acara pernikahan dan kegiatan sosial lainnya ke dalam layanan digital.\n\nMelalui fitur ini, pengguna dapat mengirim passolo secara lebih mudah, cepat, dan praktis melalui aplikasi SAKU SULTAN, meskipun tidak sempat hadir langsung di lokasi acara. Transaksi juga dapat tercatat dengan rapi sehingga lebih mudah diperiksa kembali.\n\nKehadiran PASSOLO menjadi bentuk perpaduan antara kearifan lokal dan teknologi — melestarikan budaya saling membantu sekaligus menyesuaikannya dengan kebutuhan masyarakat masa kini.\n\nPASSOLO — Tradisi Tetap Terjaga, Berbagi Jadi Lebih Mudah.",
     bullets: [
@@ -266,6 +271,8 @@ const PW_FEATURES: PwFeature[] = [
     stickyTop: "top-[100px] md:top-[120px]",
     label: "QTRA",
     title: "QTRA",
+    shortDescription:
+      "Transfer dana lebih cepat, praktis, dan aman melalui aplikasi SAKU SULTAN.",
     description:
       "QTRA atau Quick Transfer merupakan fitur transfer cepat pada aplikasi SAKU SULTAN yang dirancang untuk memudahkan pengguna mengirim dana secara praktis, aman, dan efisien melalui satu aplikasi.\n\nDengan QTRA, pengguna dapat melakukan transfer tanpa harus melalui proses yang panjang. Cukup memilih tujuan transfer, memasukkan nominal, memeriksa kembali data penerima, lalu mengonfirmasi transaksi. Fitur ini membantu pengguna menghemat waktu dalam memenuhi kebutuhan transaksi sehari-hari.\n\nQTRA memberikan beberapa manfaat utama:\n• Proses transfer lebih cepat dan sederhana.\n• Transaksi dapat dilakukan kapan saja melalui ponsel.\n• Mengurangi kesalahan dengan halaman konfirmasi data penerima.\n• Riwayat transaksi tersimpan sehingga mudah diperiksa kembali.\n• Mendukung kebutuhan pribadi maupun aktivitas usaha Mitra SAKU SULTAN.\n\nQTRA menjadi bagian dari komitmen SAKU SULTAN dalam menghadirkan layanan keuangan digital yang mudah digunakan oleh masyarakat. Kehadirannya diharapkan dapat mempercepat perputaran transaksi, mendukung kegiatan usaha para mitra, serta memperluas kebiasaan bertransaksi secara digital.\n\nQTRA — Quick Transfer: Kirim dana lebih cepat, praktis, dan aman bersama SAKU SULTAN.\n\nCatatan: tujuan transfer, biaya layanan, batas nominal, dan waktu pemrosesan mengikuti ketentuan resmi yang berlaku pada aplikasi SAKU SULTAN.",
     bullets: [
@@ -295,7 +302,7 @@ const PW_FEATURES: PwFeature[] = [
 function FeatureBlock({ feature }: { feature: PwFeature }) {
   return (
     <PwReveal
-      className={`sticky w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden ${feature.stickyTop}`}
+      className={`pw-feature-card sticky w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden ${feature.stickyTop}`}
     >
       <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-14 px-6 md:pl-16 md:pr-12 pt-8 md:pt-12 pb-0">
         <div className="w-full lg:w-[572px] pt-4 md:pt-[32px] flex flex-col gap-6 md:gap-8 shrink-0">
@@ -306,11 +313,11 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
                 {feature.label}
               </span>
             </div>
-            <h4 className="max-w-[432px] font-semibold text-[32px] md:text-[42px] leading-[38px] md:leading-[48px] tracking-[-1.2px] md:tracking-[-2px] text-[#042718] mb-4 md:mb-5">
+            <h4 className="max-w-[432px] font-semibold text-[32px] md:text-[42px] leading-[38px] md:leading-[48px] tracking-[-1.2px] md:tracking-[-2px] text-[#042718]">
               {feature.title}
             </h4>
-            <p className="w-full lg:w-[572px] whitespace-pre-line font-sans font-normal text-base md:text-lg leading-[24px] md:leading-[28px] text-[#042718] opacity-80">
-              {feature.description}
+            <p className="max-w-[508px] font-sans text-base leading-7 text-[#042718cc]">
+              {feature.shortDescription}
             </p>
           </div>
           <div className="flex flex-col gap-4 md:gap-5 w-full lg:w-[572px]">
@@ -346,19 +353,39 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
             </span>
           </a>
         </div>
-        <div className="w-full lg:w-[508px] h-[300px] md:h-[400px] lg:h-[702px] relative flex justify-center items-end">
+        <div className="w-full lg:w-[508px] h-[280px] md:h-[360px] lg:h-[560px] relative flex justify-center items-center lg:items-end">
           <PwReveal className="w-full h-full lg:h-[95%] relative" delay={200}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt={feature.imageAlt}
               loading="lazy"
               decoding="async"
-              className="object-contain object-bottom absolute inset-0 h-full w-full text-transparent"
+              className="object-contain object-center lg:object-bottom absolute inset-0 h-full w-full text-transparent"
               src={feature.imageSrc}
             />
           </PwReveal>
         </div>
       </div>
+      <details className="group mx-6 mb-10 mt-2 md:mx-12 md:mb-14">
+        <summary className="flex cursor-pointer list-none items-center justify-center gap-3 rounded-full border border-[#0427181a] px-5 py-3 font-sans text-base font-medium text-[#042718] transition-colors hover:bg-[#198F380F] [&::-webkit-details-marker]:hidden">
+          <span>Selengkapnya tentang {feature.title}</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-5 w-5 transition-transform duration-300 group-open:rotate-180"
+            aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
+        <p className="mx-auto max-w-[900px] whitespace-pre-line px-2 pt-6 font-sans text-base leading-7 text-[#042718cc]">
+          {feature.description}
+        </p>
+      </details>
     </PwReveal>
   );
 }
@@ -376,7 +403,7 @@ export function PwFeaturesTriple() {
           <PwReveal className="flex items-center gap-2 bg-[#198F380F] pl-[14px] pr-[16px] py-[6px] rounded-full border border-[#198F381A]">
             {sparklesIcon}
             <span className="font-sans font-normal text-base text-[#198F38] tracking-[-0.3px]">
-              Fitur Inti
+              Fitur Unggulan
             </span>
           </PwReveal>
           <PwReveal className="w-full max-w-[760px]" delay={100}>
