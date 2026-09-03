@@ -236,7 +236,7 @@ const PW_FEATURES: PwFeature[] = [
         rest: "Manfaatkan teknologi untuk mengembangkan usaha di era digital.",
       },
     ],
-    imageSrc: "/images/payway/Edudigi.png",
+    imageSrc: "/images/payway/Edudigi.jpg",
     imageAlt: "EduDigi",
   },
   {
@@ -292,12 +292,86 @@ const PW_FEATURES: PwFeature[] = [
         rest: "Konfirmasi penerima dan riwayat transaksi membantu mengurangi kesalahan.",
       },
     ],
-    imageSrc: "/images/payway/Q-tra.png",
+    imageSrc: "/images/payway/Q-tra.jpg",
     imageAlt: "Q-tra",
   },
 ];
 
 /* ---- sub-komponen kartu fitur (struktur identik antar blok) ---- */
+
+const checkIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-3 w-3"
+    aria-hidden="true"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
+/* Deskripsi panjang dipecah per blok \n\n: daftar • jadi list ber-ikon,
+   tagline "Nama — ..." jadi kutipan serif, "Catatan:" jadi nota kecil. */
+function FeatureDescription({ feature }: { feature: PwFeature }) {
+  const blocks = feature.description.split("\n\n");
+  return (
+    <div className="mx-auto flex max-w-[900px] flex-col gap-5">
+      {blocks.map((block) => {
+        const lines = block.split("\n");
+        const bulletLines = lines.filter((line) => line.trim().startsWith("•"));
+        if (bulletLines.length > 0) {
+          const intro = lines
+            .filter((line) => !line.trim().startsWith("•"))
+            .join(" ")
+            .trim();
+          return (
+            <div key={block} className="rounded-2xl border border-[#198F381A] bg-white/80 p-5 md:p-6">
+              {intro && <p className="mb-4 font-sans font-medium text-[#042718]">{intro}</p>}
+              <ul className="flex flex-col gap-3">
+                {bulletLines.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#198F3818] text-[#198F38]">
+                      {checkIcon}
+                    </span>
+                    <span className="font-sans text-base leading-7 text-[#042718cc]">
+                      {item.replace(/^\s*•\s*/, "")}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+        if (block.startsWith("Catatan:")) {
+          return (
+            <p key={block} className="border-l-2 border-[#198F3840] pl-4 font-sans text-sm italic leading-6 text-[#04271899]">
+              {block}
+            </p>
+          );
+        }
+        if (block.startsWith(`${feature.title} —`)) {
+          return (
+            <p
+              key={block}
+              className="py-1 text-center text-xl leading-relaxed text-[#042718] [font-family:var(--pw-font-serif)] italic md:text-2xl"
+            >
+              “{block}”
+            </p>
+          );
+        }
+        return (
+          <p key={block} className="font-sans text-base leading-7 text-[#042718cc]">
+            {block}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
 
 function FeatureBlock({ feature, index }: { feature: PwFeature; index: number }) {
   const flip = index % 2 === 1;
@@ -396,10 +470,24 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
         {/* Panel overlay: tinggi kartu tak berubah saat dibuka, teks di-scroll
             internal sehingga tetap terbaca sebelum kartu berikutnya menimpa. */}
         <div className="absolute inset-x-4 top-4 bottom-[104px] md:inset-x-10 md:top-8 md:bottom-[120px] z-10 hidden group-open:block">
-          <div className="h-full overflow-y-auto overscroll-contain rounded-[24px] border border-[#0427181a] bg-[#F6FDFF]/95 backdrop-blur-md shadow-[0_8px_24px_0_rgba(4,39,24,0.08)] p-6 md:p-8">
-            <p className="mx-auto max-w-[900px] whitespace-pre-line font-sans text-base leading-7 text-[#042718cc]">
-              {feature.description}
-            </p>
+          <div className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF]/95 shadow-[0_16px_40px_0_rgba(4,39,24,0.16)] backdrop-blur-md">
+            <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 md:px-8">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -top-4 right-4 select-none text-[88px] leading-none text-white/10 [font-family:var(--pw-font-serif)] italic"
+              >
+                0{index + 1}
+              </span>
+              <p className="text-xl font-semibold tracking-[-0.5px] text-white md:text-2xl">
+                Tentang <span className="[font-family:var(--pw-font-serif)] italic font-normal">{feature.title}</span>
+              </p>
+              <p className="mt-1 max-w-[640px] font-sans text-sm leading-6 text-white/70">
+                {feature.shortDescription}
+              </p>
+            </div>
+            <div className="flex-1 overflow-y-auto overscroll-contain p-6 md:p-8">
+              <FeatureDescription feature={feature} />
+            </div>
           </div>
         </div>
       </details>
