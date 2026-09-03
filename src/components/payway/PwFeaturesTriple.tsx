@@ -223,17 +223,17 @@ const PW_FEATURES: PwFeature[] = [
       {
         icon: zapIcon,
         lead: "Belajar layanan digital",
-        rest: "— Materi praktis dan mudah dipahami untuk mitra serta masyarakat.",
+        rest: "Materi praktis dan mudah dipahami untuk mitra serta masyarakat.",
       },
       {
         icon: globeIcon,
         lead: "Bertransaksi dengan aman",
-        rest: "— Pelajari cara menjaga PIN, OTP, dan data pribadi.",
+        rest: "Pelajari cara menjaga PIN, OTP, dan data pribadi.",
       },
       {
         icon: chartColumnIcon,
         lead: "Mendukung perkembangan usaha",
-        rest: "— Manfaatkan teknologi untuk mengembangkan usaha di era digital.",
+        rest: "Manfaatkan teknologi untuk mengembangkan usaha di era digital.",
       },
     ],
     imageSrc: "/images/payway/Edudigi.png",
@@ -251,17 +251,17 @@ const PW_FEATURES: PwFeature[] = [
       {
         icon: zapIcon,
         lead: "Kirim tanda kasih",
-        rest: "— Berikan passolo untuk acara pernikahan dan kegiatan sosial lainnya.",
+        rest: "Berikan passolo untuk acara pernikahan dan kegiatan sosial lainnya.",
       },
       {
         icon: shieldCheckIcon,
         lead: "Tetap terhubung",
-        rest: "— Kirim passolo meskipun tidak sempat hadir langsung di lokasi acara.",
+        rest: "Kirim passolo meskipun tidak sempat hadir langsung di lokasi acara.",
       },
       {
         icon: usersIcon,
         lead: "Tercatat dengan rapi",
-        rest: "— Periksa kembali riwayat transaksi dengan lebih mudah.",
+        rest: "Periksa kembali riwayat transaksi dengan lebih mudah.",
       },
     ],
     imageSrc: "/images/payway/Passolo.jpeg",
@@ -279,17 +279,17 @@ const PW_FEATURES: PwFeature[] = [
       {
         icon: creditCardIcon,
         lead: "Proses cepat dan sederhana",
-        rest: "— Pilih tujuan, masukkan nominal, periksa data, lalu konfirmasi.",
+        rest: "Pilih tujuan, masukkan nominal, periksa data, lalu konfirmasi.",
       },
       {
         icon: smartphoneIcon,
         lead: "Transfer kapan saja",
-        rest: "— Kirim dana melalui ponsel untuk kebutuhan pribadi maupun usaha.",
+        rest: "Kirim dana melalui ponsel untuk kebutuhan pribadi maupun usaha.",
       },
       {
         icon: chartColumnIcon,
         lead: "Riwayat mudah diperiksa",
-        rest: "— Konfirmasi penerima dan riwayat transaksi membantu mengurangi kesalahan.",
+        rest: "Konfirmasi penerima dan riwayat transaksi membantu mengurangi kesalahan.",
       },
     ],
     imageSrc: "/images/payway/Q-tra.png",
