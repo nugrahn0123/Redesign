@@ -137,7 +137,7 @@ export function PwCtaFooter() {
       <div className="relative z-10 w-full mt-10 lg:mt-12 overflow-hidden">
         <div className="flex justify-center items-center w-full px-0 h-[150px] sm:h-[250px] lg:h-[350px] overflow-hidden">
           <span
-            className="block w-[120%] sm:w-[115%] md:w-[112%] lg:w-[108%] font-bold text-[80px] sm:text-[180px] md:text-[240px] lg:text-[345px] tracking-[-4px] sm:tracking-[-8px] lg:tracking-[-15px] select-none pointer-events-none whitespace-nowrap leading-[0.8] -ml-[8%] sm:-ml-[5%] lg:-ml-[3%]"
+            className="block w-[130vw] sm:w-[140vw] md:w-[150vw] lg:w-[170vw] font-bold text-[80px] sm:text-[180px] md:text-[240px] lg:text-[345px] tracking-[-4px] sm:tracking-[-8px] lg:tracking-[-15px] select-none pointer-events-none whitespace-nowrap leading-[0.8] -ml-[14%] sm:-ml-[12%] md:-ml-[10%] lg:-ml-[8%]"
             style={{
               background: "linear-gradient(rgb(250, 250, 250) 4.34%, rgba(27, 109, 74, 0) 88.53%)",
               WebkitBackgroundClip: "text",

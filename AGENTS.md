@@ -3,7 +3,7 @@
 Next.js 16 (App Router) + React 19 + Tailwind v4 + TS strict. A standalone landing page that recreates the jiro.build "PayWay" fintech template, rebranded as the Indonesian PPOB e-wallet "Saku Sultan". Content is Indonesian (id).
 
 ## Commands
-
+- `npm install` **harus di install terlebih dahulu sebagai dependensi**
 - `npm run dev` / `build` / `start`
 - `npm run typecheck` — `tsc --noEmit`. **This is the only verification gate; there is NO `npm run lint` script.** Always run typecheck after changes (e.g. the `Pw*` components).
 - Path alias `@/*` → `src/*`.
