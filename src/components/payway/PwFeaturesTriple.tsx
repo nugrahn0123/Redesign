@@ -299,12 +299,20 @@ const PW_FEATURES: PwFeature[] = [
 
 /* ---- sub-komponen kartu fitur (struktur identik antar blok) ---- */
 
-function FeatureBlock({ feature }: { feature: PwFeature }) {
+function FeatureBlock({ feature, index }: { feature: PwFeature; index: number }) {
+  const flip = index % 2 === 1;
   return (
     <PwReveal
       className={`pw-feature-card sticky w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden ${feature.stickyTop}`}
     >
-      <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-14 px-6 md:pl-16 md:pr-12 pt-8 md:pt-12 pb-0">
+      {/* Nomor raksasa serif sebagai aksen latar */}
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none select-none absolute -top-8 md:-top-12 ${flip ? "left-4 md:left-10" : "right-4 md:right-10"} [font-family:var(--pw-font-serif)] italic text-[120px] md:text-[200px] leading-none text-[#198F380D]`}
+      >
+        0{index + 1}
+      </span>
+      <div className={`flex flex-col ${flip ? "lg:flex-row-reverse" : "lg:flex-row"} items-start gap-8 md:gap-14 px-6 md:px-14 pt-8 md:pt-12 pb-0`}>
         <div className="w-full lg:w-[572px] pt-4 md:pt-[32px] flex flex-col gap-6 md:gap-8 shrink-0">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 bg-[#198F380F] pl-[14px] pr-[16px] py-[6px] rounded-full border border-[#198F381A] w-fit mb-4">
@@ -354,13 +362,16 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
           </a>
         </div>
         <div className="w-full lg:w-[508px] h-[280px] md:h-[360px] lg:h-auto lg:self-stretch relative flex justify-center items-center lg:pb-10">
-          <PwReveal className="w-full h-full flex items-center justify-center" delay={200}>
+          <PwReveal className="relative w-full h-full flex items-center justify-center" delay={200}>
+            <div
+              className={`absolute inset-x-2 inset-y-4 rounded-[28px] bg-gradient-to-br from-[#198F3821] via-[#D6EFFF59] to-[#198F380a] ${flip ? "-rotate-3" : "rotate-3"}`}
+            />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt={feature.imageAlt}
               loading="lazy"
               decoding="async"
-              className="max-h-full max-w-full object-contain rounded-[20px] shadow-[0_8px_24px_0_rgba(4,39,24,0.08)]"
+              className={`relative max-h-full max-w-full object-contain rounded-[20px] shadow-[0_16px_36px_0_rgba(4,39,24,0.14)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02] ${flip ? "rotate-2" : "-rotate-2"}`}
               src={feature.imageSrc}
             />
           </PwReveal>
@@ -419,8 +430,8 @@ export function PwFeaturesTriple() {
           </PwReveal>
         </div>
         <div className="flex flex-col gap-12 w-full items-center">
-          {PW_FEATURES.map((feature) => (
-            <FeatureBlock key={feature.title} feature={feature} />
+          {PW_FEATURES.map((feature, index) => (
+            <FeatureBlock key={feature.title} feature={feature} index={index} />
           ))}
         </div>
       </div>
