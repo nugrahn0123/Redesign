@@ -382,9 +382,15 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
             <path d="m6 9 6 6 6-6" />
           </svg>
         </summary>
-        <p className="mx-auto max-w-[900px] whitespace-pre-line px-2 pt-6 font-sans text-base leading-7 text-[#042718cc]">
-          {feature.description}
-        </p>
+        {/* Panel overlay: tinggi kartu tak berubah saat dibuka, teks di-scroll
+            internal sehingga tetap terbaca sebelum kartu berikutnya menimpa. */}
+        <div className="absolute inset-x-4 top-4 bottom-[104px] md:inset-x-10 md:top-8 md:bottom-[120px] z-10 hidden group-open:block">
+          <div className="h-full overflow-y-auto overscroll-contain rounded-[24px] border border-[#0427181a] bg-[#F6FDFF]/95 backdrop-blur-md shadow-[0_8px_24px_0_rgba(4,39,24,0.08)] p-6 md:p-8">
+            <p className="mx-auto max-w-[900px] whitespace-pre-line font-sans text-base leading-7 text-[#042718cc]">
+              {feature.description}
+            </p>
+          </div>
+        </div>
       </details>
     </PwReveal>
   );

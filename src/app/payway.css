@@ -131,13 +131,8 @@ html {
   transform: none;
 }
 
-/* Saat dropdown terbuka, kartu keluar dari sticky-stack agar tidak terkunci
-   menutupi kartu berikutnya dan halaman tetap bisa di-scroll. */
-.pw-feature-card:has(details[open]) {
-  position: relative;
-  top: auto;
-  z-index: 20;
-}
+/* Kartu dengan dropdown terbuka tetap sticky agar animasi stack berjalan;
+   tanpa kenaikan z-index supaya kartu berikutnya bisa menimpa saat scroll. */
 
 @media (prefers-reduced-motion: reduce) {
   html {
