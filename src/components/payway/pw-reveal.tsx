@@ -29,13 +29,17 @@ export function PwReveal({
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
+          // Kartu yang lebih tinggi dari viewport tak pernah mencapai rasio 0.2,
+          // jadi terima juga bila potongan terlihatnya sudah cukup besar.
+          const tallEnough =
+            entry.intersectionRect.height >= window.innerHeight * 0.4;
+          if (entry.isIntersecting && (entry.intersectionRatio >= 0.2 || tallEnough)) {
             window.setTimeout(() => el.classList.add("pw-in"), delay);
             io.unobserve(el);
           }
         }
       },
-      { threshold: 0.2 },
+      { threshold: [0.05, 0.2] },
     );
     io.observe(el);
     return () => io.disconnect();

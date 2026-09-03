@@ -131,9 +131,11 @@ html {
   transform: none;
 }
 
-/* Card aktif harus berada di atas card berikutnya agar dropdown tetap dapat
-   dibaca dan tombolnya tetap bisa ditekan saat sticky-stack berjalan. */
+/* Saat dropdown terbuka, kartu keluar dari sticky-stack agar tidak terkunci
+   menutupi kartu berikutnya dan halaman tetap bisa di-scroll. */
 .pw-feature-card:has(details[open]) {
+  position: relative;
+  top: auto;
   z-index: 20;
 }
 

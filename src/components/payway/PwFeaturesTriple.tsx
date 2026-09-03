@@ -313,7 +313,7 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
                 {feature.label}
               </span>
             </div>
-            <h4 className="max-w-[432px] font-semibold text-[32px] md:text-[42px] leading-[38px] md:leading-[48px] tracking-[-1.2px] md:tracking-[-2px] text-[#042718]">
+            <h4 className="max-w-[432px] font-semibold text-[32px] md:text-[42px] leading-[38px] md:leading-[48px] tracking-[-1.2px] md:tracking-[-2px] text-[#042718] mb-3">
               {feature.title}
             </h4>
             <p className="max-w-[508px] font-sans text-base leading-7 text-[#042718cc]">
@@ -353,14 +353,14 @@ function FeatureBlock({ feature }: { feature: PwFeature }) {
             </span>
           </a>
         </div>
-        <div className="w-full lg:w-[508px] h-[280px] md:h-[360px] lg:h-[560px] relative flex justify-center items-center lg:items-end">
-          <PwReveal className="w-full h-full lg:h-[95%] relative" delay={200}>
+        <div className="w-full lg:w-[508px] h-[280px] md:h-[360px] lg:h-auto lg:self-stretch relative flex justify-center items-center lg:pb-10">
+          <PwReveal className="w-full h-full flex items-center justify-center" delay={200}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt={feature.imageAlt}
               loading="lazy"
               decoding="async"
-              className="object-contain object-center lg:object-bottom absolute inset-0 h-full w-full text-transparent"
+              className="max-h-full max-w-full object-contain rounded-[20px] shadow-[0_8px_24px_0_rgba(4,39,24,0.08)]"
               src={feature.imageSrc}
             />
           </PwReveal>
