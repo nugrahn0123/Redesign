@@ -1,4 +1,7 @@
-import type { ReactElement } from "react";
+"use client";
+
+import { useEffect, useRef, useState, type ReactElement } from "react";
+import { createPortal } from "react-dom";
 import { PwReveal } from "@/components/payway/pw-reveal";
 
 /* ---- ikon lucide inline (verbatim dari markup) ---- */
@@ -370,10 +373,44 @@ function FeatureDescription({ feature }: { feature: PwFeature }) {
 
 function FeatureBlock({ feature, index }: { feature: PwFeature; index: number }) {
   const flip = index % 2 === 1;
+  const [open, setOpen] = useState(false);
+  const wrapRef = useRef<HTMLDivElement | null>(null);
+  // Offset pin dinamis: kalau kartu lebih tinggi dari viewport, pin digeser
+  // ke atas (negatif) supaya bagian bawah kartu — tombol Lihat Detail —
+  // tetap terlihat sebelum kartu berikutnya menimpanya.
+  const [stickyTop, setStickyTop] = useState(80 + index * 20);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const update = () => {
+      const base = (window.innerWidth >= 768 ? 80 : 60) + index * 20;
+      setStickyTop(Math.min(base, window.innerHeight - el.offsetHeight - 24));
+    };
+    update();
+    window.addEventListener("resize", update);
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => {
+      window.removeEventListener("resize", update);
+      ro.disconnect();
+    };
+  }, [index]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
-    <PwReveal
-      className="pw-feature-card relative w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden"
-    >
+    <div ref={wrapRef} className="sticky w-full max-w-[1248px]" style={{ top: stickyTop }}>
+      <PwReveal
+        className="pw-feature-card relative w-full bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden"
+      >
       {/* Nomor raksasa serif sebagai aksen latar */}
       <span
         aria-hidden="true"
@@ -381,7 +418,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
       >
         0{index + 1}
       </span>
-      <div className={`flex flex-col ${flip ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 md:gap-14 px-6 md:px-14 pt-8 md:pt-12`}>
+      <div className={`flex flex-col ${flip ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 md:gap-14 px-6 md:px-14 py-8 md:py-12`}>
         <div className="w-full lg:w-[572px] pt-4 md:pt-[32px] flex flex-col gap-6 md:gap-8 shrink-0">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 bg-[#198F380F] pl-[14px] pr-[16px] py-[6px] rounded-full border border-[#198F381A] w-fit mb-4">
@@ -396,6 +433,40 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             <p className="max-w-[508px] font-sans text-base leading-7 text-[#042718cc]">
               {feature.shortDescription}
             </p>
+            <div className="flex flex-wrap items-center gap-3 mt-6">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.saku_sultan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center bg-[#042718] border border-[#0427180f] rounded-full overflow-hidden transition-all duration-300 h-[44px] w-fit"
+              >
+                <div className="absolute right-[6px] w-8 h-8 bg-white rounded-full flex items-center justify-center z-10">
+                  {arrowUpRightIcon}
+                </div>
+                <span className="block pl-[18px] pr-[46px] font-sans font-medium text-base leading-6 tracking-[-0.3px] text-white whitespace-nowrap">
+                  Download Aplikasi
+                </span>
+              </a>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="flex items-center gap-2 h-[44px] px-[18px] rounded-full border border-[#0427181a] bg-white/70 font-sans font-medium text-base tracking-[-0.3px] text-[#042718] transition-colors hover:bg-[#198F380F] whitespace-nowrap"
+              >
+                Lihat Detail
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 text-[#198F38]"
+                  aria-hidden="true"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
           </div>
           <div className="flex flex-col gap-4 md:gap-5 w-full lg:w-[572px]">
             {feature.bullets.map((bullet, index) => (
@@ -416,19 +487,6 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
               </div>
             ))}
           </div>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.saku_sultan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center bg-[#042718] border border-[#0427180f] rounded-full overflow-hidden transition-all duration-300 h-[44px] w-fit mt-2 md:mt-0"
-          >
-            <div className="absolute right-[6px] w-8 h-8 bg-white rounded-full flex items-center justify-center z-10">
-              {arrowUpRightIcon}
-            </div>
-            <span className="block pl-[18px] pr-[46px] font-sans font-medium text-base leading-6 tracking-[-0.3px] text-white whitespace-nowrap">
-              Download Aplikasi
-            </span>
-          </a>
         </div>
         <div className="w-full lg:flex-1 flex justify-center items-center">
           <PwReveal className="relative my-4 lg:my-8 w-fit" delay={200}>
@@ -446,28 +504,26 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
           </PwReveal>
         </div>
       </div>
-      <details className="group mx-6 mt-6 mb-8 md:mx-12 md:mt-8 md:mb-10">
-        <summary className="flex cursor-pointer list-none items-center justify-center gap-3 rounded-full border border-[#0427181a] px-5 py-3 font-sans text-base font-medium text-[#042718] transition-colors hover:bg-[#198F380F] [&::-webkit-details-marker]:hidden">
-          <span>Selengkapnya tentang {feature.title}</span>
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-5 w-5 transition-transform duration-300 group-open:rotate-180"
-            aria-hidden="true"
+      </PwReveal>
+      {/* Panel detail: modal via portal ke body — wrapper sticky membuat
+          stacking context sendiri sehingga fixed biasa bisa tertimpa kartu lain. */}
+      {open &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[80] flex items-center justify-center bg-[#042718]/40 p-4 backdrop-blur-sm md:p-8"
+            onClick={() => setOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Detail ${feature.title}`}
           >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </summary>
-        {/* Panel inline: kartu memanjang ke bawah saat dibuka */}
-        <div className="mt-4 overflow-hidden rounded-[24px] border border-[#0427181a] bg-white/70">
-          <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 md:px-8">
+          <div
+            onClick={(event) => event.stopPropagation()}
+            className="flex max-h-[85vh] w-full max-w-[860px] flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF] shadow-[0_24px_60px_0_rgba(4,39,24,0.3)]"
+          >
+          <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 pr-16 md:px-8">
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -top-4 right-4 select-none text-[88px] leading-none text-white/10 [font-family:var(--pw-font-serif)] italic"
+              className="pointer-events-none absolute -top-4 right-14 select-none text-[88px] leading-none text-white/10 [font-family:var(--pw-font-serif)] italic"
             >
               0{index + 1}
             </span>
@@ -477,13 +533,35 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             <p className="mt-1 max-w-[640px] font-sans text-sm leading-6 text-white/70">
               {feature.shortDescription}
             </p>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label={`Tutup detail ${feature.title}`}
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/30"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+                aria-hidden="true"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
           </div>
-          <div className="p-6 md:p-8">
+          <div className="flex-1 overflow-y-auto overscroll-contain p-6 md:p-8">
             <FeatureDescription feature={feature} />
           </div>
-        </div>
-      </details>
-    </PwReveal>
+          </div>
+          </div>,
+          document.body,
+        )}
+    </div>
   );
 }
 
