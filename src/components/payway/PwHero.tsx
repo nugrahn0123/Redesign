@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from "react";
+import { PwHeroNavigation } from "@/components/payway/PwHeroNavigation";
 import { PwHeroPhoneMockup } from "@/components/payway/PwHeroPhoneMockup";
 import { PwReveal } from "@/components/payway/pw-reveal";
 
@@ -13,13 +14,6 @@ import { PwReveal } from "@/components/payway/pw-reveal";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.saku_sultan";
-
-const NAV_LINKS = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Produk & Fitur", href: "#fitur" },
-  { label: "Promo", href: "#promo" },
-  { label: "Bantuan", href: "#bantuan" },
-] as const;
 
 const SERVICES = [
   {
@@ -520,92 +514,9 @@ export function PwHero() {
         <div className="absolute left-[-160px] top-[240px] w-[320px] h-[320px] rounded-full bg-[#E6F2FF] blur-2xl opacity-65" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center w-full pt-5">
-        <nav className="flex items-center justify-between h-[64px] sm:h-[72px] w-full px-6 lg:px-10">
-          <div className="flex items-center gap-10">
-            <PwReveal>
-              <span className="font-heading font-bold text-2xl sm:text-3xl text-[#042718] tracking-tight">
-                Saku Sultan
-              </span>
-            </PwReveal>
+      <PwHeroNavigation />
 
-            <div className="hidden lg:flex items-center gap-8">
-              {NAV_LINKS.map((item, index) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className={`font-body text-base tracking-[-0.3px] transition-all text-[#042718] ${
-                    index === 0
-                      ? "font-bold opacity-100"
-                      : "font-normal opacity-75 hover:opacity-100 hover:font-semibold"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={PLAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-base font-medium text-[#042718] opacity-75 hover:opacity-100 transition-opacity"
-            >
-              Masuk
-            </a>
-            <a
-              href={PLAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center overflow-hidden bg-[#042718] text-white p-1.5 rounded-full h-[48px] pl-4 shadow-[0_18px_36px_rgba(4,39,24,0.14)]"
-            >
-              <div className="flex items-center gap-4">
-                <span className="font-body font-medium whitespace-nowrap text-base">
-                  Daftar Sekarang
-                </span>
-                <div className="flex items-center justify-center shrink-0 w-8 h-8 rounded-full bg-white text-[#042718]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-3.5 h-3.5"
-                  >
-                    <path d="M7 7h10v10" />
-                    <path d="M7 17 17 7" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <a
-            href={PLAY_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#042718] text-white shadow-lg"
-            aria-label="Download aplikasi Saku Sultan"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-5 h-5"
-            >
-              <path d="M12 15V3" />
-              <path d="m7 10 5 5 5-5" />
-              <path d="M5 21h14" />
-            </svg>
-          </a>
-        </nav>
-
+      <div className="relative z-10 flex flex-col items-center w-full">
         <div className="main-container">
           <div className="content-container mt-[40px] md:mt-[60px] lg:mt-[84px] grid grid-cols-1 lg:grid-cols-[minmax(0,1.04fr)_420px] lg:items-start gap-12 lg:gap-12 xl:gap-16 pb-10 lg:pb-0">
             <PwReveal className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">

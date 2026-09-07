@@ -199,8 +199,6 @@ type PwFeatureBullet = {
 };
 
 type PwFeature = {
-  /** offset sticky-stack per kartu */
-  stickyTop: string;
   label: string;
   title: string;
   shortDescription: string;
@@ -212,7 +210,6 @@ type PwFeature = {
 
 const PW_FEATURES: PwFeature[] = [
   {
-    stickyTop: "top-[60px] md:top-[80px]",
     label: "EduDigi",
     title: "EduDigi",
     shortDescription:
@@ -240,7 +237,6 @@ const PW_FEATURES: PwFeature[] = [
     imageAlt: "EduDigi",
   },
   {
-    stickyTop: "top-[80px] md:top-[100px]",
     label: "PASSOLO",
     title: "PASSOLO",
     shortDescription:
@@ -268,7 +264,6 @@ const PW_FEATURES: PwFeature[] = [
     imageAlt: "PasSolo",
   },
   {
-    stickyTop: "top-[100px] md:top-[120px]",
     label: "QTRA",
     title: "QTRA",
     shortDescription:
@@ -377,7 +372,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
   const flip = index % 2 === 1;
   return (
     <PwReveal
-      className={`pw-feature-card sticky w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden ${feature.stickyTop}`}
+      className="pw-feature-card relative w-full max-w-[1248px] bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden"
     >
       {/* Nomor raksasa serif sebagai aksen latar */}
       <span
@@ -386,7 +381,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
       >
         0{index + 1}
       </span>
-      <div className={`flex flex-col ${flip ? "lg:flex-row-reverse" : "lg:flex-row"} items-start gap-8 md:gap-14 px-6 md:px-14 pt-8 md:pt-12 pb-0`}>
+      <div className={`flex flex-col ${flip ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 md:gap-14 px-6 md:px-14 pt-8 md:pt-12`}>
         <div className="w-full lg:w-[572px] pt-4 md:pt-[32px] flex flex-col gap-6 md:gap-8 shrink-0">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 bg-[#198F380F] pl-[14px] pr-[16px] py-[6px] rounded-full border border-[#198F381A] w-fit mb-4">
@@ -425,7 +420,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             href="https://play.google.com/store/apps/details?id=com.saku_sultan"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center bg-[#042718] border border-[#0427180f] rounded-full overflow-hidden transition-all duration-300 h-[44px] w-fit mt-2 md:mt-0 mb-8 md:mb-16"
+            className="group relative flex items-center bg-[#042718] border border-[#0427180f] rounded-full overflow-hidden transition-all duration-300 h-[44px] w-fit mt-2 md:mt-0"
           >
             <div className="absolute right-[6px] w-8 h-8 bg-white rounded-full flex items-center justify-center z-10">
               {arrowUpRightIcon}
@@ -435,23 +430,23 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             </span>
           </a>
         </div>
-        <div className="w-full lg:w-[508px] h-[280px] md:h-[360px] lg:h-auto lg:self-stretch relative flex justify-center items-center lg:pb-10">
-          <PwReveal className="relative w-full h-full flex items-center justify-center" delay={200}>
+        <div className="w-full lg:flex-1 flex justify-center items-center">
+          <PwReveal className="relative my-4 lg:my-8 w-fit" delay={200}>
             <div
-              className={`absolute inset-x-2 inset-y-4 rounded-[28px] bg-gradient-to-br from-[#198F3821] via-[#D6EFFF59] to-[#198F380a] ${flip ? "-rotate-3" : "rotate-3"}`}
+              className={`absolute -inset-3 md:-inset-4 rounded-[28px] bg-gradient-to-br from-[#198F3821] via-[#D6EFFF59] to-[#198F380a] ${flip ? "-rotate-3" : "rotate-3"}`}
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt={feature.imageAlt}
               loading="lazy"
               decoding="async"
-              className={`relative max-h-full max-w-full object-contain rounded-[20px] shadow-[0_16px_36px_0_rgba(4,39,24,0.14)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02] ${flip ? "rotate-2" : "-rotate-2"}`}
+              className={`relative w-auto max-w-full max-h-[320px] md:max-h-[420px] object-contain rounded-[20px] shadow-[0_16px_36px_0_rgba(4,39,24,0.14)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02] ${flip ? "rotate-2" : "-rotate-2"}`}
               src={feature.imageSrc}
             />
           </PwReveal>
         </div>
       </div>
-      <details className="group mx-6 mb-10 mt-2 md:mx-12 md:mb-14">
+      <details className="group mx-6 mt-6 mb-8 md:mx-12 md:mt-8 md:mb-10">
         <summary className="flex cursor-pointer list-none items-center justify-center gap-3 rounded-full border border-[#0427181a] px-5 py-3 font-sans text-base font-medium text-[#042718] transition-colors hover:bg-[#198F380F] [&::-webkit-details-marker]:hidden">
           <span>Selengkapnya tentang {feature.title}</span>
           <svg
@@ -467,27 +462,24 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             <path d="m6 9 6 6 6-6" />
           </svg>
         </summary>
-        {/* Panel overlay: tinggi kartu tak berubah saat dibuka, teks di-scroll
-            internal sehingga tetap terbaca sebelum kartu berikutnya menimpa. */}
-        <div className="absolute inset-x-4 top-4 bottom-[104px] md:inset-x-10 md:top-8 md:bottom-[120px] z-10 hidden group-open:block">
-          <div className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF]/95 shadow-[0_16px_40px_0_rgba(4,39,24,0.16)] backdrop-blur-md">
-            <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 md:px-8">
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -top-4 right-4 select-none text-[88px] leading-none text-white/10 [font-family:var(--pw-font-serif)] italic"
-              >
-                0{index + 1}
-              </span>
-              <p className="text-xl font-semibold tracking-[-0.5px] text-white md:text-2xl">
-                Tentang <span className="[font-family:var(--pw-font-serif)] italic font-normal">{feature.title}</span>
-              </p>
-              <p className="mt-1 max-w-[640px] font-sans text-sm leading-6 text-white/70">
-                {feature.shortDescription}
-              </p>
-            </div>
-            <div className="flex-1 overflow-y-auto overscroll-contain p-6 md:p-8">
-              <FeatureDescription feature={feature} />
-            </div>
+        {/* Panel inline: kartu memanjang ke bawah saat dibuka */}
+        <div className="mt-4 overflow-hidden rounded-[24px] border border-[#0427181a] bg-white/70">
+          <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 md:px-8">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-4 right-4 select-none text-[88px] leading-none text-white/10 [font-family:var(--pw-font-serif)] italic"
+            >
+              0{index + 1}
+            </span>
+            <p className="text-xl font-semibold tracking-[-0.5px] text-white md:text-2xl">
+              Tentang <span className="[font-family:var(--pw-font-serif)] italic font-normal">{feature.title}</span>
+            </p>
+            <p className="mt-1 max-w-[640px] font-sans text-sm leading-6 text-white/70">
+              {feature.shortDescription}
+            </p>
+          </div>
+          <div className="p-6 md:p-8">
+            <FeatureDescription feature={feature} />
           </div>
         </div>
       </details>

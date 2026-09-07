@@ -152,3 +152,56 @@ html {
   70%  { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
+
+/* ---- header hero (PwHeroNavigation, porting dari repo tim) ---- */
+.saku-hero-navbar {
+  isolation: isolate;
+}
+
+.saku-hero-navbar::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 -28px;
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 30, 19, 0.3) 0%,
+    rgba(3, 30, 19, 0.12) 58%,
+    transparent 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.saku-hero-nav-text {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.saku-hero-nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.88);
+  transition: color 0.3s ease;
+}
+
+.saku-hero-nav-link::after {
+  position: absolute;
+  right: 18%;
+  bottom: 2px;
+  left: 18%;
+  height: 2px;
+  border-radius: 999px;
+  background: #d9f36a;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.saku-hero-nav-link:hover,
+.saku-hero-nav-link.is-active {
+  color: #fff;
+}
+
+.saku-hero-nav-link:hover::after,
+.saku-hero-nav-link.is-active::after {
+  transform: scaleX(1);
+}
