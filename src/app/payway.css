@@ -205,3 +205,67 @@ html {
 .saku-hero-nav-link.is-active::after {
   transform: scaleX(1);
 }
+
+/* ---- efek kedalaman stacked-card (PwFeaturesTriple) ----
+   transform/filter di-drive per-frame oleh JS saat kartu berikutnya
+   menimpa kartu yang sedang pinned. */
+.pw-stack-depth {
+  transform-origin: center top;
+  will-change: transform, filter;
+}
+
+/* ---- animasi masuk modal detail fitur ---- */
+@keyframes pwBackdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pwModalPop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.pw-modal-backdrop {
+  animation: pwBackdropIn 0.25s ease both;
+}
+.pw-modal-panel {
+  animation: pwModalPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+/* ---- kilau menyapu gambar fitur saat hover ---- */
+.pw-shine {
+  position: relative;
+  overflow: hidden;
+}
+.pw-shine::after {
+  position: absolute;
+  inset: -20% auto -20% -70%;
+  width: 45%;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  content: "";
+  pointer-events: none;
+  transform: skewX(-18deg);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pw-shine:hover::after {
+  transform: skewX(-18deg) translateX(340%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pw-modal-backdrop,
+  .pw-modal-panel {
+    animation: none;
+  }
+  .pw-shine::after {
+    display: none;
+  }
+}

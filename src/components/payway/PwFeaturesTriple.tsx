@@ -375,6 +375,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
   const flip = index % 2 === 1;
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
+  const depthRef = useRef<HTMLDivElement | null>(null);
   // Offset pin dinamis: kalau kartu lebih tinggi dari viewport, pin digeser
   // ke atas (negatif) supaya bagian bawah kartu — tombol Lihat Detail —
   // tetap terlihat sebelum kartu berikutnya menimpanya.
@@ -397,17 +398,53 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
     };
   }, [index]);
 
+  // Efek kedalaman: saat kartu berikutnya menimpa, kartu ini mengecil & meredup.
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    const inner = depthRef.current;
+    if (!wrap || !inner) return;
+    const next = wrap.nextElementSibling;
+    if (!next) return; // kartu terakhir tidak pernah tertimpa
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        if (media.matches) return;
+        const rect = wrap.getBoundingClientRect();
+        const covered = rect.bottom - next.getBoundingClientRect().top;
+        const p = Math.min(Math.max(covered / (rect.height * 0.9), 0), 1);
+        inner.style.transform = `scale(${1 - p * 0.05})`;
+        inner.style.filter = `brightness(${1 - p * 0.1}) saturate(${1 - p * 0.15})`;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
   }, [open]);
 
   return (
     <div ref={wrapRef} className="sticky w-full max-w-[1248px]" style={{ top: stickyTop }}>
+      <div ref={depthRef} className="pw-stack-depth">
       <PwReveal
         className="pw-feature-card relative w-full bg-[#F6FDFF] border border-[#04271803] rounded-[30px] shadow-[0_8px_20px_0_rgba(4,39,24,0.04)] overflow-hidden"
       >
@@ -493,24 +530,29 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             <div
               className={`absolute -inset-3 md:-inset-4 rounded-[28px] bg-gradient-to-br from-[#198F3821] via-[#D6EFFF59] to-[#198F380a] ${flip ? "-rotate-3" : "rotate-3"}`}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt={feature.imageAlt}
-              loading="lazy"
-              decoding="async"
-              className={`relative w-auto max-w-full max-h-[320px] md:max-h-[420px] object-contain rounded-[20px] shadow-[0_16px_36px_0_rgba(4,39,24,0.14)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02] ${flip ? "rotate-2" : "-rotate-2"}`}
-              src={feature.imageSrc}
-            />
+            <div
+              className={`pw-shine relative w-fit rounded-[20px] shadow-[0_16px_36px_0_rgba(4,39,24,0.14)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02] ${flip ? "rotate-2" : "-rotate-2"}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt={feature.imageAlt}
+                loading="lazy"
+                decoding="async"
+                className="w-auto max-w-full max-h-[320px] md:max-h-[420px] object-contain rounded-[20px]"
+                src={feature.imageSrc}
+              />
+            </div>
           </PwReveal>
         </div>
       </div>
       </PwReveal>
+      </div>
       {/* Panel detail: modal via portal ke body — wrapper sticky membuat
           stacking context sendiri sehingga fixed biasa bisa tertimpa kartu lain. */}
       {open &&
         createPortal(
           <div
-            className="fixed inset-0 z-[80] flex items-center justify-center bg-[#042718]/40 p-4 backdrop-blur-sm md:p-8"
+            className="pw-modal-backdrop fixed inset-0 z-[80] flex items-center justify-center bg-[#042718]/40 p-4 backdrop-blur-sm md:p-8"
             onClick={() => setOpen(false)}
             role="dialog"
             aria-modal="true"
@@ -518,7 +560,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
           >
           <div
             onClick={(event) => event.stopPropagation()}
-            className="flex max-h-[85vh] w-full max-w-[860px] flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF] shadow-[0_24px_60px_0_rgba(4,39,24,0.3)]"
+            className="pw-modal-panel flex max-h-[85vh] w-full max-w-[860px] flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF] shadow-[0_24px_60px_0_rgba(4,39,24,0.3)]"
           >
           <div className="relative shrink-0 overflow-hidden bg-gradient-to-r from-[#042718] to-[#11603a] px-6 py-5 pr-16 md:px-8">
             <span
@@ -583,7 +625,10 @@ export function PwFeaturesTriple() {
           </PwReveal>
           <PwReveal className="w-full max-w-[760px]" delay={100}>
             <h2 className="w-full font-semibold text-[32px] md:text-[42px] lg:text-[52px] leading-[38px] md:leading-[48px] lg:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]">
-              Fitur Saku Sultan yang Sesuai dengan Kebutuhan Harian
+              Fitur Saku Sultan yang Sesuai dengan{" "}
+              <span className="[font-family:var(--pw-font-serif)] italic font-normal">
+                Kebutuhan Harian
+              </span>
             </h2>
           </PwReveal>
         </div>
