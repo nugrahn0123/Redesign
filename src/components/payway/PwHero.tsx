@@ -565,6 +565,7 @@ export function PwHero() {
                     </span>
                     <div className="flex items-center justify-center shrink-0 w-11 h-11 rounded-full bg-white text-[#042718]">
                       <svg
+                        aria-hidden="true"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -590,6 +591,7 @@ export function PwHero() {
                     </span>
                     <div className="flex items-center justify-center shrink-0 w-11 h-11 rounded-full bg-[#042718] text-white">
                       <svg
+                        aria-hidden="true"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"

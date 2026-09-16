@@ -102,7 +102,7 @@ export function PwPricing() {
                       Download Sekarang
                     </span>
                     <div className="flex items-center justify-center w-12 h-12 md:w-[56px] md:h-[56px] rounded-full bg-[#042718] text-white shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right md:w-6 md:h-6">
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right md:w-6 md:h-6">
                         <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
                       </svg>
                     </div>

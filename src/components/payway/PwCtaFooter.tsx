@@ -64,6 +64,7 @@ export function PwCtaFooter() {
               <span className="font-medium text-lg text-white whitespace-nowrap">Download Gratis</span>
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-white shrink-0">
                 <svg
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
                   height="18"
