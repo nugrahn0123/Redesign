@@ -31,9 +31,25 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sakusultan.id"),
   title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
   description:
     "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. Praktis, cepat, dan aman. #PastiUNTUNG",
+  openGraph: {
+    title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
+    description:
+      "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. Praktis, cepat, dan aman. #PastiUNTUNG",
+    url: "/",
+    siteName: "Saku Sultan",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
+    description:
+      "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. #PastiUNTUNG",
+  },
   robots: { index: false, follow: false },
 };
 
