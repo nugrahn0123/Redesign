@@ -160,7 +160,7 @@ export function PwCtaFooter() {
               </a>
             </div>
             <p className="text-[14px] sm:text-[18px] text-white opacity-70 order-3 md:order-2">
-              © 2026 Saku Sultan. All rights reserved.
+              © {new Date().getFullYear()} Saku Sultan. All rights reserved.
             </p>
             <span className="text-[14px] sm:text-[18px] text-white opacity-70 order-1 md:order-3">
               #PastiUNTUNG
