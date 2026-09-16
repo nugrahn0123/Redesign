@@ -14,7 +14,7 @@ import { PwWhatsappButton } from "@/components/payway/PwWhatsappButton";
  */
 export default function PaywayPage() {
   return (
-    <main className="w-full overflow-x-clip">
+    <main id="konten-utama" className="w-full overflow-x-clip">
       <PwHero />
       <PwInsights />
       <PwFeaturesTriple />
