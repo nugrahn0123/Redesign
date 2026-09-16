@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Syarat & Ketentuan — Saku Sultan",
+  description:
+    "Syarat dan ketentuan penggunaan layanan transaksi digital Saku Sultan.",
+};
+
 const ITEMS = [
   "Saku Sultan menyediakan layanan transaksi digital seperti pulsa, paket data, pembayaran tagihan, top-up e-money, dan QRIS.",
   "Pengguna wajib memastikan data akun dan nominal transaksi sudah benar sebelum pembayaran dikonfirmasi.",
