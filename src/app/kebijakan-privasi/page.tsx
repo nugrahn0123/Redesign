@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kebijakan Privasi — Saku Sultan",
+  description:
+    "Kebijakan privasi Saku Sultan: bagaimana data pengguna dikumpulkan, disimpan, dan dilindungi.",
+};
+
 const ITEMS = [
   "Saku Sultan hanya mengumpulkan data yang diperlukan untuk registrasi akun, verifikasi identitas, dan pemrosesan transaksi.",
   "Informasi pengguna disimpan dengan perlindungan berlapis dan tidak dibagikan ke pihak lain tanpa dasar hukum atau persetujuan.",
