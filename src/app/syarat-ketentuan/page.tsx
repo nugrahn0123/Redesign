@@ -39,6 +39,13 @@ export default function TermsPage() {
             </div>
           ))}
         </div>
+
+        <a
+          href="/"
+          className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#042718] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#063a24]"
+        >
+          &larr; Kembali ke beranda
+        </a>
       </div>
     </main>
   );
