@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Instrument_Serif, Inter } from "next/font/google";
 import "./payway.css";
 
@@ -51,6 +51,12 @@ export const metadata: Metadata = {
       "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. #PastiUNTUNG",
   },
   robots: { index: false, follow: false },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#042718",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function PaywayRootLayout({
