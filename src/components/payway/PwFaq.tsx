@@ -23,7 +23,7 @@ import { PwReveal } from "@/components/payway/pw-reveal";
 
 type FaqItem = { q: string; a: string };
 
-const FAQ_ITEMS: FaqItem[] = [
+export const FAQ_ITEMS: FaqItem[] = [
   {
     q: "Bagaimana cara daftar Saku Sultan?",
     a: "Unduh aplikasi dari Google Play Store, buat akun baru, lalu verifikasi data diri Anda dalam hitungan menit.",
