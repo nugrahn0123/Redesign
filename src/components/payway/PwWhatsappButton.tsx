@@ -10,7 +10,7 @@ export function PwWhatsappButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat CS via WhatsApp"
-      className="fixed bottom-5 right-5 z-[100] group flex items-center gap-0 hover:gap-3 transition-all duration-300"
+      className="fixed bottom-5 right-5 z-[100] group flex items-center gap-0 hover:gap-3 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
     >
       {/* Tooltip "Chat CS" — muncul saat hover di desktop */}
       <span className="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-[#042718] text-white text-sm font-medium px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg">
