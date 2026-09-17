@@ -159,7 +159,7 @@ export function PwTestimonials() {
       className="relative w-full overflow-hidden bg-white scroll-mt-24 "
     >
       <div className="absolute inset-0 w-full h-full z-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+        <video aria-hidden="true" autoPlay loop muted playsInline className="w-full h-full object-cover">
           <source src="/videos/payway/header-01-bg-payway.mp4" type="video/mp4" />
         </video>
       </div>

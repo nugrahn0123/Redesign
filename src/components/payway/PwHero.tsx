@@ -506,7 +506,7 @@ export function PwHero() {
       className="relative w-full overflow-hidden bg-white scroll-mt-24"
     >
       <div className="absolute inset-0 z-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+        <video aria-hidden="true" autoPlay loop muted playsInline className="w-full h-full object-cover">
           <source src="/videos/payway/header.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-white/78" />

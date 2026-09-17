@@ -79,6 +79,7 @@ export function PwProcess() {
                     <div className="relative w-full overflow-hidden rounded-t-[20px] md:rounded-t-[32px] max-w-[548px] h-[240px] mt-6">
                       <div className="relative w-full h-full">
                         <video
+                          aria-hidden="true"
                           autoPlay
                           loop
                           muted
@@ -128,6 +129,7 @@ export function PwProcess() {
                     <div className="relative w-full overflow-hidden rounded-t-[20px] md:rounded-t-[32px] max-w-[548px] h-0 opacity-0 mt-0">
                       <div className="relative w-full h-full">
                         <video
+                          aria-hidden="true"
                           autoPlay
                           loop
                           muted
@@ -177,6 +179,7 @@ export function PwProcess() {
                     <div className="relative w-full overflow-hidden rounded-t-[20px] md:rounded-t-[32px] max-w-[548px] h-0 opacity-0 mt-0">
                       <div className="relative w-full h-full">
                         <video
+                          aria-hidden="true"
                           autoPlay
                           loop
                           muted

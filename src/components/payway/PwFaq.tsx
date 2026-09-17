@@ -130,6 +130,7 @@ export function PwFaq() {
                       <div className="absolute inset-0 z-0">
                         <div className="absolute inset-0 bg-[#042718]/60 z-10" />
                         <video
+                          aria-hidden="true"
                           autoPlay
                           loop
                           muted

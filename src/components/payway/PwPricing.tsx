@@ -46,7 +46,7 @@ export function PwPricing() {
           <div className="w-full max-w-[620px]">
             <div className="relative cursor-pointer transition-all duration-500 overflow-hidden flex flex-col p-8 w-full bg-[#042718] rounded-[48px]">
               <div className="absolute inset-0 z-0">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <video aria-hidden="true" autoPlay loop muted playsInline className="w-full h-full object-cover">
                   <source src="/videos/payway/header-01-bg-payway.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-[#042718]/60 z-10" />
