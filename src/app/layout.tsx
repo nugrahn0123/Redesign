@@ -50,6 +50,10 @@ export const metadata: Metadata = {
     description:
       "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. #PastiUNTUNG",
   },
+  icons: {
+    icon: "/images/saku-sultan-app-icon.png",
+    apple: "/images/saku-sultan-app-icon.png",
+  },
   robots: { index: false, follow: false },
 };
 
