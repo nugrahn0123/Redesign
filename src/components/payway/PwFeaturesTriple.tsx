@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState, type ReactElement } from "react";
 import { createPortal } from "react-dom";
@@ -219,7 +219,7 @@ const PW_FEATURES: PwFeature[] = [
     shortDescription:
       "Belajar menggunakan layanan digital dengan aman, bijak, dan bertanggung jawab.",
     description:
-      "EduDigi merupakan program edukasi pada aplikasi SAKU SULTAN yang dirancang untuk meningkatkan pengetahuan dan keterampilan digital para mitra serta masyarakat. Program ini menyajikan pembelajaran yang praktis dan mudah dipahami, khususnya mengenai penggunaan layanan keuangan digital secara bijak, aman, dan bertanggung jawab.\n\nMelalui EduDigi, pengguna dapat mempelajari cara bertransaksi digital, menjaga kerahasiaan PIN dan kode OTP, melindungi data pribadi, mengenali modus penipuan daring, serta memanfaatkan teknologi untuk mengembangkan usaha.\n\nKehadiran EduDigi menegaskan bahwa SAKU SULTAN tidak hanya menyediakan layanan transaksi, tetapi juga turut membangun masyarakat yang semakin cakap dan aman di era digital.\n\nEduDigi — Belajar Digital, Bertransaksi Aman, Usaha Makin Berkembang.",
+      "EduDigi merupakan program edukasi pada aplikasi SAKU SULTAN yang dirancang untuk meningkatkan pengetahuan dan keterampilan digital para mitra serta masyarakat. Program ini menyajikan pembelajaran yang praktis dan mudah dipahami, khususnya mengenai penggunaan layanan keuangan digital secara bijak, aman, dan bertanggung jawab.\n\nMelalui EduDigi, pengguna dapat mempelajari cara bertransaksi digital, menjaga kerahasiaan PIN dan kode OTP, melindungi data pribadi, mengenali modus penipuan daring, serta memanfaatkan teknologi untuk mengembangkan usaha.\n\nKehadiran EduDigi menegaskan bahwa SAKU SULTAN tidak hanya menyediakan layanan transaksi, tetapi juga turut membangun masyarakat yang semakin cakap dan aman di era digital.\n\nEduDigi â€” Belajar Digital, Bertransaksi Aman, Usaha Makin Berkembang.",
     bullets: [
       {
         icon: zapIcon,
@@ -246,7 +246,7 @@ const PW_FEATURES: PwFeature[] = [
     shortDescription:
       "Kirim tanda kasih untuk acara pernikahan dan kegiatan sosial secara praktis.",
     description:
-      "PASSOLO merupakan fitur yang mengangkat tradisi masyarakat Sulawesi Selatan dalam memberikan sumbangan atau tanda kasih pada acara pernikahan dan kegiatan sosial lainnya ke dalam layanan digital.\n\nMelalui fitur ini, pengguna dapat mengirim passolo secara lebih mudah, cepat, dan praktis melalui aplikasi SAKU SULTAN, meskipun tidak sempat hadir langsung di lokasi acara. Transaksi juga dapat tercatat dengan rapi sehingga lebih mudah diperiksa kembali.\n\nKehadiran PASSOLO menjadi bentuk perpaduan antara kearifan lokal dan teknologi — melestarikan budaya saling membantu sekaligus menyesuaikannya dengan kebutuhan masyarakat masa kini.\n\nPASSOLO — Tradisi Tetap Terjaga, Berbagi Jadi Lebih Mudah.",
+      "PASSOLO merupakan fitur yang mengangkat tradisi masyarakat Sulawesi Selatan dalam memberikan sumbangan atau tanda kasih pada acara pernikahan dan kegiatan sosial lainnya ke dalam layanan digital.\n\nMelalui fitur ini, pengguna dapat mengirim passolo secara lebih mudah, cepat, dan praktis melalui aplikasi SAKU SULTAN, meskipun tidak sempat hadir langsung di lokasi acara. Transaksi juga dapat tercatat dengan rapi sehingga lebih mudah diperiksa kembali.\n\nKehadiran PASSOLO menjadi bentuk perpaduan antara kearifan lokal dan teknologi â€” melestarikan budaya saling membantu sekaligus menyesuaikannya dengan kebutuhan masyarakat masa kini.\n\nPASSOLO â€” Tradisi Tetap Terjaga, Berbagi Jadi Lebih Mudah.",
     bullets: [
       {
         icon: zapIcon,
@@ -273,7 +273,7 @@ const PW_FEATURES: PwFeature[] = [
     shortDescription:
       "Transfer dana lebih cepat, praktis, dan aman melalui aplikasi SAKU SULTAN.",
     description:
-      "QTRA atau Quick Transfer merupakan fitur transfer cepat pada aplikasi SAKU SULTAN yang dirancang untuk memudahkan pengguna mengirim dana secara praktis, aman, dan efisien melalui satu aplikasi.\n\nDengan QTRA, pengguna dapat melakukan transfer tanpa harus melalui proses yang panjang. Cukup memilih tujuan transfer, memasukkan nominal, memeriksa kembali data penerima, lalu mengonfirmasi transaksi. Fitur ini membantu pengguna menghemat waktu dalam memenuhi kebutuhan transaksi sehari-hari.\n\nQTRA memberikan beberapa manfaat utama:\n• Proses transfer lebih cepat dan sederhana.\n• Transaksi dapat dilakukan kapan saja melalui ponsel.\n• Mengurangi kesalahan dengan halaman konfirmasi data penerima.\n• Riwayat transaksi tersimpan sehingga mudah diperiksa kembali.\n• Mendukung kebutuhan pribadi maupun aktivitas usaha Mitra SAKU SULTAN.\n\nQTRA menjadi bagian dari komitmen SAKU SULTAN dalam menghadirkan layanan keuangan digital yang mudah digunakan oleh masyarakat. Kehadirannya diharapkan dapat mempercepat perputaran transaksi, mendukung kegiatan usaha para mitra, serta memperluas kebiasaan bertransaksi secara digital.\n\nQTRA — Quick Transfer: Kirim dana lebih cepat, praktis, dan aman bersama SAKU SULTAN.\n\nCatatan: tujuan transfer, biaya layanan, batas nominal, dan waktu pemrosesan mengikuti ketentuan resmi yang berlaku pada aplikasi SAKU SULTAN.",
+      "QTRA atau Quick Transfer merupakan fitur transfer cepat pada aplikasi SAKU SULTAN yang dirancang untuk memudahkan pengguna mengirim dana secara praktis, aman, dan efisien melalui satu aplikasi.\n\nDengan QTRA, pengguna dapat melakukan transfer tanpa harus melalui proses yang panjang. Cukup memilih tujuan transfer, memasukkan nominal, memeriksa kembali data penerima, lalu mengonfirmasi transaksi. Fitur ini membantu pengguna menghemat waktu dalam memenuhi kebutuhan transaksi sehari-hari.\n\nQTRA memberikan beberapa manfaat utama:\nâ€¢ Proses transfer lebih cepat dan sederhana.\nâ€¢ Transaksi dapat dilakukan kapan saja melalui ponsel.\nâ€¢ Mengurangi kesalahan dengan halaman konfirmasi data penerima.\nâ€¢ Riwayat transaksi tersimpan sehingga mudah diperiksa kembali.\nâ€¢ Mendukung kebutuhan pribadi maupun aktivitas usaha Mitra SAKU SULTAN.\n\nQTRA menjadi bagian dari komitmen SAKU SULTAN dalam menghadirkan layanan keuangan digital yang mudah digunakan oleh masyarakat. Kehadirannya diharapkan dapat mempercepat perputaran transaksi, mendukung kegiatan usaha para mitra, serta memperluas kebiasaan bertransaksi secara digital.\n\nQTRA â€” Quick Transfer: Kirim dana lebih cepat, praktis, dan aman bersama SAKU SULTAN.\n\nCatatan: tujuan transfer, biaya layanan, batas nominal, dan waktu pemrosesan mengikuti ketentuan resmi yang berlaku pada aplikasi SAKU SULTAN.",
     bullets: [
       {
         icon: creditCardIcon,
@@ -313,18 +313,18 @@ const checkIcon = (
   </svg>
 );
 
-/* Deskripsi panjang dipecah per blok \n\n: daftar • jadi list ber-ikon,
-   tagline "Nama — ..." jadi kutipan serif, "Catatan:" jadi nota kecil. */
+/* Deskripsi panjang dipecah per blok \n\n: daftar â€¢ jadi list ber-ikon,
+   tagline "Nama â€” ..." jadi kutipan serif, "Catatan:" jadi nota kecil. */
 function FeatureDescription({ feature }: { feature: PwFeature }) {
   const blocks = feature.description.split("\n\n");
   return (
     <div className="mx-auto flex max-w-[900px] flex-col gap-5">
       {blocks.map((block) => {
         const lines = block.split("\n");
-        const bulletLines = lines.filter((line) => line.trim().startsWith("•"));
+        const bulletLines = lines.filter((line) => line.trim().startsWith("â€¢"));
         if (bulletLines.length > 0) {
           const intro = lines
-            .filter((line) => !line.trim().startsWith("•"))
+            .filter((line) => !line.trim().startsWith("â€¢"))
             .join(" ")
             .trim();
           return (
@@ -337,7 +337,7 @@ function FeatureDescription({ feature }: { feature: PwFeature }) {
                       {checkIcon}
                     </span>
                     <span className="font-sans text-base leading-7 text-[#042718cc]">
-                      {item.replace(/^\s*•\s*/, "")}
+                      {item.replace(/^\s*â€¢\s*/, "")}
                     </span>
                   </li>
                 ))}
@@ -352,13 +352,13 @@ function FeatureDescription({ feature }: { feature: PwFeature }) {
             </p>
           );
         }
-        if (block.startsWith(`${feature.title} —`)) {
+        if (block.startsWith(`${feature.title} â€”`)) {
           return (
             <p
               key={block}
               className="py-1 text-center text-xl leading-relaxed text-[#042718] [font-family:var(--pw-font-serif)] italic md:text-2xl"
             >
-              “{block}”
+              â€œ{block}â€
             </p>
           );
         }
@@ -377,8 +377,11 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const depthRef = useRef<HTMLDivElement | null>(null);
+  const detailButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const modalPanelRef = useRef<HTMLDivElement | null>(null);
   // Offset pin dinamis: kalau kartu lebih tinggi dari viewport, pin digeser
-  // ke atas (negatif) supaya bagian bawah kartu — tombol Lihat Detail —
+  // ke atas (negatif) supaya bagian bawah kartu â€” tombol Lihat Detail â€”
   // tetap terlihat sebelum kartu berikutnya menimpanya.
   const [stickyTop, setStickyTop] = useState(80 + index * 20);
 
@@ -432,14 +435,40 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
 
   useEffect(() => {
     if (!open) return;
+
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const focusableElements = Array.from(
+        modalPanelRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements.at(-1);
+      if (!firstElement || !lastElement) return;
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
     };
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKey);
+      detailButtonRef.current?.focus();
     };
   }, [open]);
 
@@ -486,6 +515,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
                 </span>
               </a>
               <button
+                ref={detailButtonRef}
                 type="button"
                 onClick={() => setOpen(true)}
                 className="flex items-center gap-2 h-[44px] px-[18px] rounded-full border border-[#0427181a] bg-white/70 font-sans font-medium text-base tracking-[-0.3px] text-[#042718] transition-colors hover:bg-[#198F380F] whitespace-nowrap"
@@ -548,7 +578,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
       </div>
       </PwReveal>
       </div>
-      {/* Panel detail: modal via portal ke body — wrapper sticky membuat
+      {/* Panel detail: modal via portal ke body â€” wrapper sticky membuat
           stacking context sendiri sehingga fixed biasa bisa tertimpa kartu lain. */}
       {open &&
         createPortal(
@@ -560,6 +590,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
             aria-label={`Detail ${feature.title}`}
           >
           <div
+            ref={modalPanelRef}
             onClick={(event) => event.stopPropagation()}
             className="pw-modal-panel flex max-h-[85vh] w-full max-w-[860px] flex-col overflow-hidden rounded-[24px] border border-[#0427181a] bg-[#F6FDFF] shadow-[0_24px_60px_0_rgba(4,39,24,0.3)]"
           >
@@ -577,6 +608,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
               {feature.shortDescription}
             </p>
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={() => setOpen(false)}
               aria-label={`Tutup detail ${feature.title}`}
