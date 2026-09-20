@@ -17,6 +17,11 @@ const NAV_LINKS = [
 export function PwHeroNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (isOpen) firstMobileLinkRef.current?.focus();
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -128,6 +133,7 @@ export function PwHeroNavigation() {
             <div className="grid">
               {NAV_LINKS.map((item, index) => (
                 <a
+                  ref={index === 0 ? firstMobileLinkRef : undefined}
                   key={item.label}
                   href={item.href}
                   onClick={closeMenu}
