@@ -516,7 +516,11 @@ export function PwHero() {
 
       <PwHeroNavigation />
 
-      <div className="relative z-10 flex flex-col items-center w-full">
+      <div
+        id="konten-utama"
+        tabIndex={-1}
+        className="relative z-10 flex w-full flex-col items-center focus:outline-none"
+      >
         <div className="main-container">
           <div className="content-container mt-[40px] md:mt-[60px] lg:mt-[84px] grid grid-cols-1 lg:grid-cols-[minmax(0,1.04fr)_420px] lg:items-start gap-12 lg:gap-12 xl:gap-16 pb-10 lg:pb-0">
             <PwReveal className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">

@@ -16,7 +16,11 @@ const ITEMS = [
 
 export default function TermsPage() {
   return (
-    <main id="konten-utama" className="min-h-screen bg-white px-6 py-16 text-[#042718]">
+    <main
+      id="konten-utama"
+      tabIndex={-1}
+      className="min-h-screen bg-white px-6 py-16 text-[#042718] focus:outline-none"
+    >
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
           Saku Sultan

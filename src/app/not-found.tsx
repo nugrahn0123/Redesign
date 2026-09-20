@@ -6,7 +6,11 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-16 text-center text-[#042718]">
+    <main
+      id="konten-utama"
+      tabIndex={-1}
+      className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-16 text-center text-[#042718] focus:outline-none"
+    >
       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
         Error 404
       </p>

@@ -25,7 +25,7 @@ const FAQ_JSON_LD = {
  */
 export default function PaywayPage() {
   return (
-    <main id="konten-utama" className="w-full overflow-x-clip">
+    <main className="w-full overflow-x-clip">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
