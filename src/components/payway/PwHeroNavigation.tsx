@@ -16,6 +16,7 @@ const NAV_LINKS = [
 
 export function PwHeroNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
 
@@ -36,11 +37,33 @@ export function PwHeroNavigation() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
+    const closeOnOutsidePointer = (event: PointerEvent) => {
+      if (event.target instanceof Node && !navRef.current?.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    const closeAtDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setIsOpen(false);
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    desktopQuery.addEventListener("change", closeAtDesktop);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePointer);
+      desktopQuery.removeEventListener("change", closeAtDesktop);
+    };
+  }, [isOpen]);
+
   const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="saku-hero-navbar sticky top-0 z-50 w-full px-5 pt-6 sm:px-8 lg:px-12 xl:px-24">
       <nav
+        ref={navRef}
         aria-label="Navigasi utama"
         className="relative mx-auto flex h-[60px] w-full max-w-[1248px] items-center justify-between sm:h-16"
       >
