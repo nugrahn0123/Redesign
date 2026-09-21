@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
   description:
     "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. Praktis, cepat, dan aman. #PastiUNTUNG",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
     description:
