@@ -28,6 +28,7 @@ const sparklesIcon = (
 
 const arrowLeftIcon = (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
@@ -46,6 +47,7 @@ const arrowLeftIcon = (
 
 const arrowRightIcon = (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
@@ -125,6 +127,7 @@ function CarouselNav({
     <div className={className}>
       <button
         type="button"
+        aria-label="Lihat testimoni sebelumnya"
         onClick={onPrev}
         className="w-12 h-12 flex items-center justify-center transition-all duration-300 bg-white/90 backdrop-blur-sm text-[#042718] rounded-[30px]"
       >
@@ -132,6 +135,7 @@ function CarouselNav({
       </button>
       <button
         type="button"
+        aria-label="Lihat testimoni berikutnya"
         onClick={onNext}
         className="w-12 h-12 flex items-center justify-center transition-all duration-300 bg-[#042718] text-white rounded-full shadow-[0_4px_20px_0_rgba(4,39,24,0.04)]"
       >
