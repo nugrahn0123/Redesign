@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     icon: "/images/saku-sultan-app-icon.png",
     apple: "/images/saku-sultan-app-icon.png",
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
