@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useState } from "react";
 import { PwReveal } from "@/components/payway/pw-reveal";
 
 /**
@@ -107,19 +107,12 @@ export function PwFaq() {
               {FAQ_ITEMS.map((item, index) => {
                 const open = openIndex === index;
                 const number = `${String(index + 1).padStart(2, "0")}.`;
+                const questionId = `faq-question-${index}`;
+                const answerId = `faq-answer-${index}`;
                 return (
                   <div
                     key={item.q}
-                    role="button"
-                    tabIndex={0}
-                    aria-expanded={open}
                     onClick={() => toggle(index)}
-                    onKeyDown={(event: KeyboardEvent<HTMLDivElement>) => {
-                      if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        toggle(index);
-                      }
-                    }}
                     className={
                       open
                         ? "w-full lg:w-[686px] cursor-pointer transition-all duration-500 overflow-hidden relative p-5 md:p-6 rounded-[20px] border border-black/5 bg-[#042718] shadow-[0_4px_20px_0_rgba(0,0,0,0.06)]"
@@ -158,14 +151,26 @@ export function PwFaq() {
                           {number}
                         </span>
                         <div className="flex flex-col gap-[8px] md:gap-[10px]">
-                          <h4
-                            className={`font-heading font-semibold text-xl md:text-2xl leading-[26px] md:leading-[30px] tracking-[-0.6px] md:tracking-[-0.8px] ${
-                              open ? "text-white" : "text-[#042718]"
-                            }`}
+                          <button
+                            type="button"
+                            aria-expanded={open}
+                            aria-controls={answerId}
+                            className="w-full text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168344]/35"
                           >
-                            {item.q}
-                          </h4>
+                            <h4
+                              id={questionId}
+                              className={`font-heading font-semibold text-xl md:text-2xl leading-[26px] md:leading-[30px] tracking-[-0.6px] md:tracking-[-0.8px] ${
+                                open ? "text-white" : "text-[#042718]"
+                              }`}
+                            >
+                              {item.q}
+                            </h4>
+                          </button>
                           <div
+                            id={answerId}
+                            role="region"
+                            aria-labelledby={questionId}
+                            aria-hidden={!open}
                             className={`grid transition-all duration-300 ease-in-out ${
                               open
                                 ? "grid-rows-[1fr] mt-0"
@@ -188,6 +193,7 @@ export function PwFaq() {
                         {open ? (
                           <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
                             <svg
+                              aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
                               height="24"
@@ -206,6 +212,7 @@ export function PwFaq() {
                         ) : (
                           <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#F3F4F6] flex items-center justify-center">
                             <svg
+                              aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
                               height="24"
