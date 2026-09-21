@@ -201,7 +201,7 @@ export function PwTestimonials() {
                   <div className="relative w-10 h-8 mb-6 md:mb-8">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      alt="Quote"
+                      alt=""
                       loading="lazy"
                       decoding="async"
                       className="object-contain absolute inset-0 h-full w-full text-transparent"
@@ -216,7 +216,7 @@ export function PwTestimonials() {
                       <div className="relative w-full h-full rounded-full overflow-hidden border border-[#042718]/5">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          alt={testimonial.name}
+                          alt={`Foto ${testimonial.name}`}
                           loading="lazy"
                           decoding="async"
                           className="object-cover absolute inset-0 h-full w-full text-transparent"
@@ -226,7 +226,7 @@ export function PwTestimonials() {
                       <div className="absolute -right-1 -bottom-1 w-[18px] h-[18px] rounded-full border border-white overflow-hidden z-10">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          alt="Country flag"
+                          alt=""
                           loading="lazy"
                           decoding="async"
                           className="object-cover absolute inset-0 h-full w-full text-transparent"
