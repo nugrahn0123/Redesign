@@ -66,6 +66,7 @@ export function PwFaq() {
         <div className="flex flex-col items-center mb-16 lg:mb-24 text-center max-w-[800px]">
           <PwReveal className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#F0FDF4] border border-[#DCFCE7] mb-6">
             <svg
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
