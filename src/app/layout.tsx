@@ -32,6 +32,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sakusultan.id"),
+  applicationName: "Saku Sultan",
   title: "Saku Sultan — Mudahkan Hidupmu dengan Transaksi Kekinian",
   description:
     "Bayar pulsa, listrik, PDAM, BPJS, dan top-up e-money semua dalam satu genggaman. Praktis, cepat, dan aman. #PastiUNTUNG",
