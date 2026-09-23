@@ -159,6 +159,7 @@ export function PwHeroNavigation() {
                   ref={index === 0 ? firstMobileLinkRef : undefined}
                   key={item.label}
                   href={item.href}
+                  aria-current={index === 0 ? "page" : undefined}
                   onClick={closeMenu}
                   className={`flex min-h-12 items-center justify-between border-b border-[#0A5332]/10 px-3 text-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168344]/20 ${
                     index === 0 ? "font-bold text-[#073B24]" : "font-medium text-[#29493C] hover:text-[#073B24]"
