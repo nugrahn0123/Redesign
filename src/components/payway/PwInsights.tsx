@@ -2,6 +2,7 @@ import { PwReveal } from "@/components/payway/pw-reveal";
 
 const sparklesIcon = (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -61,6 +62,7 @@ export function PwInsights() {
                   </div>
                   <div className="w-14 h-14 rounded-2xl bg-[#042718] text-white flex items-center justify-center shadow-lg">
                     <svg
+                      aria-hidden="true"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
