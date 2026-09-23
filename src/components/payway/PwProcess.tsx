@@ -60,7 +60,7 @@ export function PwProcess() {
               <div className="w-full lg:w-[612px] flex flex-col items-start gap-4">
                 {/* Step 1 — aktif (terbuka) */}
                 <PwReveal className="w-full">
-                  <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer pt-5 md:pt-6 px-5 md:px-6 pb-0 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
+                  <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border pt-5 md:pt-6 px-5 md:px-6 pb-0 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
                     <div className="flex items-start gap-3 md:gap-4 w-full">
                       <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border transition-all duration-500 shrink-0 bg-[#042718] border-[#042718] text-white">
                         <span className="font-semibold text-base md:text-lg">
@@ -110,7 +110,7 @@ export function PwProcess() {
                 </PwReveal>
                 {/* Step 2 — collapsed */}
                 <PwReveal delay={120} className="w-full">
-                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
+                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
                     <div className="flex items-start gap-3 md:gap-4 w-full">
                       <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border transition-all duration-500 shrink-0 bg-[#0427180D] border-[#0427181A] text-[#042718]">
                         <span className="font-semibold text-base md:text-lg">
@@ -160,7 +160,7 @@ export function PwProcess() {
                 </PwReveal>
                 {/* Step 3 — collapsed */}
                 <PwReveal delay={240} className="w-full">
-                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border cursor-pointer pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
+                   <div className="flex flex-col items-start self-stretch transition-all duration-500 ease-out rounded-[24px] overflow-hidden border pt-5 md:pt-6 px-5 md:px-6 pb-5 md:pb-6 gap-5 border-[#042718]/5 shadow-[0_4px_20px_0_rgba(4,39,24,0.02),0_4px_10px_0_rgba(4,39,24,0.04)] bg-[#f6fdff]">
                     <div className="flex items-start gap-3 md:gap-4 w-full">
                       <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border transition-all duration-500 shrink-0 bg-[#0427180D] border-[#0427181A] text-[#042718]">
                         <span className="font-semibold text-base md:text-lg">
