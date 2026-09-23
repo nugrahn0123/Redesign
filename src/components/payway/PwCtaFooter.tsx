@@ -16,7 +16,7 @@ import { PwReveal } from "@/components/payway/pw-reveal";
  */
 export function PwCtaFooter() {
   return (
-    <section className="relative w-full overflow-hidden flex flex-col ">
+    <footer className="relative w-full overflow-hidden flex flex-col ">
       {/* Fade putih dari section sebelumnya */}
       <div
         className="absolute top-0 left-0 w-full h-[300px] z-[5] pointer-events-none"
@@ -168,6 +168,6 @@ export function PwCtaFooter() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
