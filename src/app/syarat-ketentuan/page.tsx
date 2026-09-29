@@ -10,7 +10,7 @@ const ITEMS = [
   "Saku Sultan menyediakan layanan transaksi digital seperti pulsa, paket data, pembayaran tagihan, top-up e-money, dan QRIS.",
   "Pengguna wajib memastikan data akun dan nominal transaksi sudah benar sebelum pembayaran dikonfirmasi.",
   "Promo, cashback, dan penawaran khusus dapat berubah sewaktu-waktu sesuai kebijakan Saku Sultan.",
-  "Apabila terjadi kendala transaksi, pengguna dapat menghubungi layanan pelanggan melalui WhatsApp atau email resmi.",
+  "Apabila terjadi kendala transaksi, pengguna dapat menghubungi layanan pelanggan melalui email resmi.",
   "Dengan menggunakan layanan ini, pengguna dianggap menyetujui ketentuan penggunaan yang berlaku.",
 ];
 

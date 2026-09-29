@@ -17,7 +17,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Bagaimana jika transaksi saya gagal?",
-    a: "Dana otomatis dikembalikan. Hubungi layanan pelanggan melalui WhatsApp untuk bantuan lebih lanjut.",
+    a: "Periksa status transaksi di aplikasi dan hubungi layanan pelanggan melalui email jika membutuhkan bantuan lebih lanjut.",
   },
   {
     q: "Apakah ada biaya tambahan?",

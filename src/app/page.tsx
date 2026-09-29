@@ -8,7 +8,7 @@ import { PwFaq } from "@/components/payway/PwFaq";
 import { FAQ_ITEMS } from "@/components/payway/faq-data";
 import { PwPricing } from "@/components/payway/PwPricing";
 import { PwCtaFooter } from "@/components/payway/PwCtaFooter";
-import { PwWhatsappButton } from "@/components/payway/PwWhatsappButton";
+import { PwContactButton } from "@/components/payway/PwContactButton";
 
 /** Structured data FAQPage agar tanya-jawab terbaca mesin pencari. */
 const FAQ_JSON_LD = {
@@ -40,7 +40,7 @@ export default function PaywayPage() {
       <PwPricing />
       <PwFaq />
       <PwCtaFooter />
-      <PwWhatsappButton />
+      <PwContactButton />
     </main>
   );
 }

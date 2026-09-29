@@ -229,12 +229,10 @@ export function PwFaq() {
                   Butuh Bantuan?
                 </h3>
                 {/* prettier-ignore */}
-                <p className="font-sans text-lg text-[#042718] opacity-70 leading-normal">Tim support kami siap membantu Anda 24/7. <br className="hidden sm:block" /> Hubungi kami via WhatsApp.</p>
+                <p className="font-sans text-lg text-[#042718] opacity-70 leading-normal">Ada pertanyaan seputar Saku Sultan? <br className="hidden sm:block" /> Hubungi kami melalui email.</p>
               </div>
               <a
-                href="https://wa.me/6281234567890"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:cs@sakusultan.id"
                 className="group flex items-center gap-[32px] bg-[#042718] hover:bg-[#063a24] text-white pl-8 pr-4 py-4 rounded-full transition-all duration-300 shadow-lg"
                 tabIndex={0}
               >
