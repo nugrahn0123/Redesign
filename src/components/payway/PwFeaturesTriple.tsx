@@ -645,7 +645,7 @@ function FeatureBlock({ feature, index }: { feature: PwFeature; index: number })
 export function PwFeaturesTriple() {
   return (
     <section
-      id="fitur-lengkap"
+      id="fitur"
       className="w-full bg-white flex flex-col items-center py-24 gap-16 scroll-mt-24"
     >
       <div className="w-full max-w-[1440px] px-6 lg:px-[96px] flex flex-col items-center gap-[64px]">
