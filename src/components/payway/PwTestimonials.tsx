@@ -193,7 +193,7 @@ export function PwTestimonials() {
           tabIndex={0}
           className="w-full max-w-[1248px] overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168344]/25"
         >
-          <div className="flex -ml-4 lg:-ml-6 items-start min-w-max pr-4">
+          <div className="flex -ml-4 lg:-ml-6 items-start w-full pr-4">
             {PW_TESTIMONIALS.map((testimonial, index) => (
               <PwReveal
                 key={testimonial.name}
