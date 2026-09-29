@@ -253,7 +253,7 @@ export function PwTestimonials() {
           </div>
         </div>
         <CarouselNav
-          className="hidden sm:flex lg:hidden items-center gap-4"
+          className="flex lg:hidden items-center gap-4"
           onPrev={() => scrollCards("prev")}
           onNext={() => scrollCards("next")}
         />
