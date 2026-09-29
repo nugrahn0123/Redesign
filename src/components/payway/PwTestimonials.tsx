@@ -153,7 +153,10 @@ export function PwTestimonials() {
   const scrollCards = (direction: "prev" | "next") => {
     const el = trackRef.current;
     if (!el) return;
-    const amount = direction === "next" ? 440 : -440;
+    const cards = el.firstElementChild?.children;
+    if (!cards || cards.length < 2) return;
+    const cardStep = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+    const amount = direction === "next" ? cardStep : -cardStep;
     el.scrollBy({ left: amount, behavior: "smooth" });
   };
 
