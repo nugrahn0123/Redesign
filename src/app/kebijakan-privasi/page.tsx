@@ -16,7 +16,7 @@ const ITEMS = [
 export default function PrivacyPage() {
   return (
     <main
-      id="konten-utama"
+      id="konten-utama yang berisi kebijakan privasi"
       tabIndex={-1}
       className="min-h-screen bg-white px-6 py-16 text-[#042718] focus:outline-none"
     >
