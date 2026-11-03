@@ -30,8 +30,8 @@ export default function PrivacyPage() {
           Kebijakan Privasi
         </h1>
         <p className="mb-10 text-lg leading-8 text-[#042718]/75">
-          Halaman ringkas ini memastikan tautan privasi bekerja dan memberi
-          konteks dasar kepada pengunjung landing page.
+          Halaman ini menjelaskan secara singkat bagaimana Saku Sultan
+          mengelola dan melindungi data Anda.
         </p>
 
         <div className="space-y-4">
