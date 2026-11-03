@@ -41,7 +41,7 @@ export default function PrivacyPage() {
           {ITEMS.map((item) => (
             <div
               key={item}
-              className="rounded-3xl border border-[#042718]/8 bg-[#F6FDFF] p-5"
+              className="rounded-3xl border border-[#042718]/8 bg-[#F6FDFF] p-5 transition-shadow duration-300 hover:shadow-md"
             >
               <p className="leading-7 text-[#042718]/80">{item}</p>
             </div>
