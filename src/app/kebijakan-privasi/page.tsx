@@ -24,7 +24,7 @@ export default function PrivacyPage() {
     >
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
-          Saku Sultan
+          Saku Sultan &middot; Legal
         </p>
         <h1 className="mb-4 font-heading text-4xl font-semibold tracking-tight md:text-5xl">
           Kebijakan Privasi
