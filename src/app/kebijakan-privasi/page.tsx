@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Kebijakan Privasi — Saku Sultan",
   description:
     "Kebijakan privasi Saku Sultan: bagaimana data pengguna dikumpulkan, disimpan, dan dilindungi.",
+  openGraph: { title: "Kebijakan Privasi — Saku Sultan" },
 };
 
 const ITEMS = [
