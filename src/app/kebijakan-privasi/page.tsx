@@ -59,6 +59,11 @@ export default function PrivacyPage() {
             cs@sakusultan.id
           </a>
           .
+          Lihat juga{" "}
+          <a href="/syarat-ketentuan" className="font-semibold text-[#198F38] underline">
+            Syarat &amp; Ketentuan
+          </a>
+          .
         </p>
 
         <a
