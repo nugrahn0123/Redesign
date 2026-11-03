@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           Kebijakan ini dapat diperbarui sewaktu-waktu.
         </p>
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           {ITEMS.map((item, index) => (
             <div
               key={item}
