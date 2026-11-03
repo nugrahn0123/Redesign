@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         <h1 className="mb-4 font-heading text-4xl font-semibold tracking-tight md:text-5xl">
           Kebijakan Privasi
         </h1>
-        <p className="mb-3 text-lg leading-8 text-[#042718]/75">
+        <p className="mb-3 max-w-2xl text-lg leading-8 text-[#042718]/75">
           Halaman ini menjelaskan secara singkat bagaimana Saku Sultan
           mengelola dan melindungi data Anda.
         </p>
