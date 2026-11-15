@@ -46,7 +46,7 @@ export default function PrivacyPage() {
               key={item}
               className="flex gap-4 rounded-3xl border border-[#042718]/8 bg-[#F6FDFF] p-6 transition-shadow duration-300 hover:shadow-md"
             >
-              <span className="font-semibold text-[#198F38]">{index + 1}.</span>
+              <span aria-hidden="true" className="shrink-0 font-semibold leading-7 text-[#198F38]">{index + 1}.</span>
               <p className="leading-7 text-[#042718]/80">{item}</p>
             </li>
           ))}
