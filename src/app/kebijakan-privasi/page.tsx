@@ -36,7 +36,7 @@ export default function PrivacyPage() {
           Halaman ini menjelaskan secara singkat bagaimana Saku Sultan
           mengelola dan melindungi data Anda.
         </p>
-        <p className="mb-10 text-sm text-[#042718]/60">
+        <p className="mb-10 text-sm text-[#042718]/75">
           Kebijakan ini dapat diperbarui sewaktu-waktu.
         </p>
 
