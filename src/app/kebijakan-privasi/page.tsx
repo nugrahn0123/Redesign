@@ -21,14 +21,15 @@ export default function PrivacyPage() {
   return (
     <main
       id="konten-utama"
-      tabIndex={-1}
+      aria-labelledby="judul-kebijakan-privasi"
+        tabIndex={-1}
       className="min-h-screen bg-white px-6 py-16 text-[#042718] focus:outline-none"
     >
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
           Saku Sultan &middot; Legal
         </p>
-        <h1 className="mb-4 font-heading text-4xl font-semibold tracking-tight md:text-5xl">
+        <h1 id="judul-kebijakan-privasi" className="mb-4 font-heading text-4xl font-semibold tracking-tight md:text-5xl">
           Kebijakan Privasi
         </h1>
         <p className="mb-3 max-w-2xl text-lg leading-8 text-[#042718]/75">
