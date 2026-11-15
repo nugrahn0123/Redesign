@@ -56,7 +56,7 @@ export default function PrivacyPage() {
           Pertanyaan lain? Email kami di{" "}
           <a
             href="mailto:cs@sakusultan.id"
-            className="font-semibold text-[#198F38] underline"
+            className="inline-block min-h-11 max-w-full break-all rounded-sm py-2 align-middle font-semibold leading-7 text-[#146e2b] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#198F38]"
           >
             cs@sakusultan.id
           </a>
