@@ -40,17 +40,17 @@ export default function PrivacyPage() {
           Kebijakan ini dapat diperbarui sewaktu-waktu.
         </p>
 
-        <div className="space-y-5">
+        <ol role="list" className="list-none space-y-5 p-0">
           {ITEMS.map((item, index) => (
-            <div
+            <li
               key={item}
               className="flex gap-4 rounded-3xl border border-[#042718]/8 bg-[#F6FDFF] p-6 transition-shadow duration-300 hover:shadow-md"
             >
               <span className="font-semibold text-[#198F38]">{index + 1}.</span>
               <p className="leading-7 text-[#042718]/80">{item}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
         <p className="mt-8 text-[#042718]/75">
           Pertanyaan lain? Email kami di{" "}
