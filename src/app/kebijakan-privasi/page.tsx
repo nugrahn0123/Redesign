@@ -62,7 +62,10 @@ export default function PrivacyPage() {
           </a>
           .
           Lihat juga{" "}
-          <a href="/syarat-ketentuan" className="font-semibold text-[#198F38] underline">
+          <a
+            href="/syarat-ketentuan"
+            className="inline-block min-h-11 max-w-full rounded-sm py-2 align-middle font-semibold leading-7 text-[#146e2b] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#198F38]"
+          >
             Syarat &amp; Ketentuan
           </a>
           .
