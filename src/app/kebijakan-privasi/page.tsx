@@ -23,7 +23,7 @@ export default function PrivacyPage() {
       id="konten-utama"
       aria-labelledby="judul-kebijakan-privasi"
         tabIndex={-1}
-      className="min-h-screen bg-white px-6 py-16 text-[#042718] focus:outline-none"
+      className="min-h-screen bg-white px-4 py-10 text-[#042718] focus:outline-none sm:px-6 sm:py-16"
     >
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
