@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         <a
           href="/"
           aria-label="Kembali ke beranda Saku Sultan"
-          className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#042718] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#063a24] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#198F38]"
+          className="mt-10 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#042718] px-6 py-3 text-center text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#063a24] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#198F38] motion-reduce:transition-none"
         >
           &larr; Kembali ke beranda
         </a>
