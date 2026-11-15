@@ -44,7 +44,7 @@ export default function PrivacyPage() {
           {ITEMS.map((item, index) => (
             <li
               key={item}
-              className="flex gap-3 rounded-3xl border border-[#042718]/20 bg-[#F6FDFF] p-4 transition-shadow duration-300 hover:shadow-md sm:gap-4 sm:p-6"
+              className="flex gap-3 rounded-3xl border border-[#042718]/20 bg-[#F6FDFF] p-4 transition-shadow duration-300 hover:shadow-md motion-reduce:transition-none sm:gap-4 sm:p-6"
             >
               <span aria-hidden="true" className="shrink-0 font-semibold leading-7 text-[#198F38]">{index + 1}.</span>
               <p className="leading-7 text-[#042718]/80">{item}</p>
