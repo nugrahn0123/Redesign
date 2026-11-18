@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     title: "Kebijakan Privasi — Saku Sultan",
     description:
       "Pelajari bagaimana Saku Sultan mengumpulkan, menyimpan, dan melindungi data pribadi Anda.",
+    locale: "id_ID",
+    type: "website",
   },
   robots: { index: true, follow: true },
 };
