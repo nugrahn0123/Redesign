@@ -33,7 +33,7 @@ export default function PrivacyPage() {
     >
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#198F38]">
-          Saku Sultan &middot; Legal
+          Saku Sultan &middot; Informasi Hukum
         </p>
         <h1
           id="judul-kebijakan-privasi"
