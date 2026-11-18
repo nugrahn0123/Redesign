@@ -39,6 +39,9 @@ export default function PrivacyPage() {
           Halaman ini menjelaskan secara ringkas bagaimana Saku Sultan
           mengumpulkan, menyimpan, dan melindungi data pribadi Anda.
         </p>
+        <p className="mb-3 text-sm text-[#042718]/75">
+          Terakhir diperbarui: 18 November 2026.
+        </p>
         <p className="mb-10 text-sm text-[#042718]/75">
           Kebijakan ini dapat diperbarui sewaktu-waktu.
         </p>
