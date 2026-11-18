@@ -53,7 +53,11 @@ export default function PrivacyPage() {
           ini secara berkala.
         </p>
 
-        <ol role="list" className="list-none space-y-5 p-0">
+        <ol
+          role="list"
+          aria-label="Poin utama kebijakan privasi"
+          className="list-none space-y-5 p-0"
+        >
           {ITEMS.map((item, index) => (
             <li
               key={item}
