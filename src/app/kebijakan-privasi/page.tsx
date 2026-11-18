@@ -77,7 +77,7 @@ export default function PrivacyPage() {
           >
             cs@sakusultan.id
           </a>
-          .
+          .{" "}
           Lihat juga{" "}
           <a
             href="/syarat-ketentuan"
