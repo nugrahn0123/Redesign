@@ -14,7 +14,7 @@ const ITEMS = [
   "Riwayat transaksi dapat digunakan untuk menampilkan status pembayaran, promo yang relevan, dan meningkatkan kualitas layanan.",
   "Data pribadi disimpan selama akun Anda aktif dan sesuai dengan kewajiban hukum yang berlaku.",
   "Pengguna berhak meminta akses, perbaikan, atau penghapusan data pribadi miliknya.",
-  "Pengguna dapat menghubungi cs@sakusultan.id jika membutuhkan bantuan terkait data pribadi atau keamanan akun.",
+  "Hubungi cs@sakusultan.id jika Anda membutuhkan bantuan terkait data pribadi atau keamanan akun.",
 ];
 
 export default function PrivacyPage() {
