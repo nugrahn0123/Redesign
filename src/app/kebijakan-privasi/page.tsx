@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ITEMS = [
-  "Saku Sultan hanya mengumpulkan data yang diperlukan untuk registrasi akun, verifikasi identitas, dan pemrosesan transaksi.",
+  "Saku Sultan hanya mengumpulkan data yang diperlukan untuk pendaftaran akun, verifikasi identitas, dan pemrosesan transaksi.",
   "Informasi pengguna disimpan dengan perlindungan berlapis dan tidak dibagikan ke pihak lain tanpa dasar hukum atau persetujuan.",
   "Riwayat transaksi dapat digunakan untuk menampilkan status pembayaran, promo yang relevan, dan peningkatan kualitas layanan.",
   "Data pribadi disimpan selama akun aktif dan sesuai kewajiban hukum yang berlaku.",
