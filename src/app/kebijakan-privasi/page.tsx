@@ -13,7 +13,7 @@ const ITEMS = [
   "Informasi pengguna disimpan dengan perlindungan berlapis dan tidak dibagikan kepada pihak lain tanpa dasar hukum atau persetujuan pengguna.",
   "Riwayat transaksi dapat digunakan untuk menampilkan status pembayaran, promo yang relevan, dan meningkatkan kualitas layanan.",
   "Data pribadi disimpan selama akun Anda aktif dan sesuai dengan kewajiban hukum yang berlaku.",
-  "Pengguna berhak meminta akses, perbaikan, atau penghapusan data pribadinya.",
+  "Pengguna berhak meminta akses, perbaikan, atau penghapusan data pribadi miliknya.",
   "Pengguna dapat menghubungi cs@sakusultan.id jika membutuhkan bantuan terkait data pribadi atau keamanan akun.",
 ];
 
