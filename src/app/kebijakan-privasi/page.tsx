@@ -12,7 +12,7 @@ const ITEMS = [
   "Saku Sultan hanya mengumpulkan data yang diperlukan untuk pendaftaran akun, verifikasi identitas, dan pemrosesan transaksi.",
   "Informasi pengguna disimpan dengan perlindungan berlapis dan tidak dibagikan kepada pihak lain tanpa dasar hukum atau persetujuan pengguna.",
   "Riwayat transaksi dapat digunakan untuk menampilkan status pembayaran, promo yang relevan, dan meningkatkan kualitas layanan.",
-  "Data pribadi disimpan selama akun aktif dan sesuai kewajiban hukum yang berlaku.",
+  "Data pribadi disimpan selama akun Anda aktif dan sesuai dengan kewajiban hukum yang berlaku.",
   "Pengguna berhak meminta akses, perbaikan, atau penghapusan data pribadinya.",
   "Pengguna dapat menghubungi cs@sakusultan.id jika membutuhkan bantuan terkait data pribadi atau keamanan akun.",
 ];
