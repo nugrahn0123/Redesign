@@ -4,7 +4,11 @@ export const metadata: Metadata = {
   title: "Kebijakan Privasi — Saku Sultan",
   description:
     "Kebijakan privasi Saku Sultan: bagaimana data pribadi pengguna dikumpulkan, disimpan, digunakan, dan dilindungi.",
-  openGraph: { title: "Kebijakan Privasi — Saku Sultan" },
+  openGraph: {
+    title: "Kebijakan Privasi — Saku Sultan",
+    description:
+      "Pelajari bagaimana Saku Sultan mengumpulkan, menyimpan, dan melindungi data pribadi Anda.",
+  },
   robots: { index: true, follow: true },
 };
 
