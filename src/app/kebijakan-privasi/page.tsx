@@ -49,7 +49,8 @@ export default function PrivacyPage() {
           Terakhir diperbarui: 18 November 2026.
         </p>
         <p className="mb-10 text-sm text-[#042718]/75">
-          Kebijakan ini dapat diperbarui sewaktu-waktu.
+          Kebijakan ini dapat diperbarui sewaktu-waktu. Silakan periksa halaman
+          ini secara berkala.
         </p>
 
         <ol role="list" className="list-none space-y-5 p-0">
